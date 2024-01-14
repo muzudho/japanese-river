@@ -1,5 +1,6 @@
-[gd_scene load_steps=65 format=3 uid="uid://b2ubr7dn0hb1m"]
+[gd_scene load_steps=66 format=3 uid="uid://b2ubr7dn0hb1m"]
 
+[ext_resource type="Texture2D" uid="uid://cgnugo4w58ee6" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-2016--TatamiColor-o2o1o0.png" id="1_24t6m"]
 [ext_resource type="Texture2D" uid="uid://dcao5gmtt113o" path="res://🍋images/🪑grayscale/1280x720/event_room.png" id="1_bkjec"]
 [ext_resource type="Texture2D" uid="uid://nkj3xedigtox" path="res://🍋images/🪑grayscale/1280x720/ending.png" id="2_04i5w"]
 [ext_resource type="Texture2D" uid="uid://b81tmjslp5ae6" path="res://🍋images/🪑grayscale/1280x720/map_arround_sakikawa_station.png" id="3_8aocr"]
@@ -69,6 +70,10 @@
 
 [node name="ーーーー背景（Ｚ＝０）ーーーー" type="Node" parent="."]
 
+[node name="🗻畳み" type="Sprite2D" parent="."]
+texture = ExtResource("1_24t6m")
+centered = false
+
 [node name="🗻４Ｆイベントルーム" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(640, 360)
@@ -101,190 +106,237 @@ texture = ExtResource("6_civvo")
 centered = false
 
 [node name="🗻01北海道" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("7_oc41s")
 centered = false
 
 [node name="🗻02青森県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("8_uvdy1")
 centered = false
 
 [node name="🗻03岩手県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("9_0bckd")
 centered = false
 
 [node name="🗻04宮城県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("10_u3sb0")
 centered = false
 
 [node name="🗻05秋田県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("11_fe2fu")
 centered = false
 
 [node name="🗻06山形県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("12_d8tca")
 centered = false
 
 [node name="🗻07福島県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("13_nr3qt")
 centered = false
 
 [node name="🗻08茨城県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("14_572rg")
 centered = false
 
 [node name="🗻09栃木県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("15_dg47m")
 centered = false
 
 [node name="🗻10群馬県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("16_twjla")
 centered = false
 
 [node name="🗻11埼玉県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("17_i5qx0")
 centered = false
 
 [node name="🗻12千葉県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("18_fiasy")
 centered = false
 
 [node name="🗻13東京都" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("19_svnhf")
 centered = false
 
 [node name="🗻14神奈川県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("20_ofwfc")
 centered = false
 
 [node name="🗻15新潟県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("21_5wpax")
 centered = false
 
 [node name="🗻16富山県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("22_fdgi0")
 centered = false
 
 [node name="🗻17石川県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("23_oqocm")
 centered = false
 
 [node name="🗻18福井県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("24_o0ul3")
 centered = false
 
 [node name="🗻19山梨県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("25_mf7xb")
 centered = false
 
 [node name="🗻20長野県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("26_8y5ce")
 centered = false
 
 [node name="🗻21岐阜県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("27_fqqkq")
 centered = false
 
 [node name="🗻22静岡県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("28_2h04o")
 centered = false
 
 [node name="🗻23愛知県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("29_p52cu")
 centered = false
 
 [node name="🗻24三重県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("30_wvqix")
 centered = false
 
 [node name="🗻25滋賀県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("31_k6csg")
 centered = false
 
 [node name="🗻26京都府" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("32_xmiql")
 centered = false
 
 [node name="🗻27大阪府" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("33_5lckd")
 centered = false
 
 [node name="🗻28兵庫県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("34_p8qbr")
 centered = false
 
 [node name="🗻29奈良県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("35_4nyki")
 centered = false
 
 [node name="🗻30和歌山県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("36_5n1ls")
 centered = false
 
 [node name="🗻31鳥取県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("37_4jxmd")
 centered = false
 
 [node name="🗻32島根県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("38_fepit")
 centered = false
 
 [node name="🗻33岡山県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("39_oyw4u")
 centered = false
 
 [node name="🗻34広島県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("40_cxauo")
 centered = false
 
 [node name="🗻35山口県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("41_kf0jd")
 centered = false
 
 [node name="🗻36徳島県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("42_q7t2l")
 centered = false
 
 [node name="🗻37香川県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("43_gdltm")
 centered = false
 
 [node name="🗻38愛媛県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("44_hcaeh")
 centered = false
 
 [node name="🗻39高知県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("45_8ogtp")
 centered = false
 
 [node name="🗻40福岡県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("46_d0tr8")
 centered = false
 
 [node name="🗻41佐賀県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("47_xpwxu")
 centered = false
 
 [node name="🗻42長崎県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("48_h4288")
 centered = false
 
 [node name="🗻43熊本県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("49_etfxa")
 centered = false
 
 [node name="🗻44大分県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("50_b0pkq")
 centered = false
 
 [node name="🗻45宮崎県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("51_g70h4")
 centered = false
 
 [node name="🗻46鹿児島県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("52_fkqyd")
 centered = false
 
 [node name="🗻47沖縄県" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("53_0ejst")
 centered = false
 
