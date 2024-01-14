@@ -6,65 +6,65 @@
 [ext_resource type="Texture2D" uid="uid://b81tmjslp5ae6" path="res://🍋images/🪑grayscale/1280x720/map_arround_sakikawa_station.png" id="3_8aocr"]
 [ext_resource type="Texture2D" uid="uid://dpc35dvufjgp4" path="res://🍋images/🪑grayscale/1280x720/kawahori_road.png" id="4_lm548"]
 [ext_resource type="Texture2D" uid="uid://dii7tlfnq4rhb" path="res://🍋images/🪑grayscale/1280x720/tsutsuji_road.png" id="5_cj82d"]
-[ext_resource type="Texture2D" uid="uid://bjypkflfper5k" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1114--JapanBoard-o3o1o0.png" id="6_civvo"]
 [ext_resource type="Texture2D" uid="uid://bfjtuxbo3tuqn" path="res://🍋images/🪑grayscale/1280x720/full_screen.png" id="6_vbtfu"]
-[ext_resource type="Texture2D" uid="uid://dbfyryoy5k3gb" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-01Hokkaido.png" id="7_oc41s"]
+[ext_resource type="Texture2D" uid="uid://bk5ce6uk7pn8q" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-2140--JapanBoard-brown.png" id="7_1yf71"]
 [ext_resource type="Texture2D" uid="uid://d1dltajd4gtjj" path="res://🍋images/🪑grayscale/1280x720/window_small_at_center.png" id="7_qic1n"]
 [ext_resource type="Texture2D" uid="uid://6eodi1kuyeqn" path="res://🍋images/🪑grayscale/1280x720/window_at_bottom_left.png" id="8_nk4cv"]
-[ext_resource type="Texture2D" uid="uid://dps0xdgmtpyx7" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-02Aomori.png" id="8_uvdy1"]
-[ext_resource type="Texture2D" uid="uid://uqgfnk18lgvr" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-03Iwate.png" id="9_0bckd"]
+[ext_resource type="Texture2D" uid="uid://c83e2o1tgcl50" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-01Hokkaido-o2o0.png" id="8_suujs"]
+[ext_resource type="Texture2D" uid="uid://d4jdt0hn65u5" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-02Aomori-o2o0.png" id="9_a144x"]
 [ext_resource type="Texture2D" uid="uid://c6j864566m67c" path="res://🍋images/🪑grayscale/1280x720/window_middle_at_center.png" id="9_atiwg"]
 [ext_resource type="Texture2D" uid="uid://bwg68n0qnvqvb" path="res://🍋images/🪑grayscale/0512x288/ShogiBan.png" id="10_mha8e"]
-[ext_resource type="Texture2D" uid="uid://dfvpq3y42pad6" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-04Miyagi.png" id="10_u3sb0"]
-[ext_resource type="Texture2D" uid="uid://3fox616y2gt1" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-05Akita.png" id="11_fe2fu"]
+[ext_resource type="Texture2D" uid="uid://ch6405mx1gbmf" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-03Iwate-o2o0.png" id="10_xrnf2"]
 [ext_resource type="Texture2D" uid="uid://dqxq5q0bpom30" path="res://🍋images/🪑grayscale/0512x288/file_and_rank.png" id="11_gagqq"]
-[ext_resource type="Texture2D" uid="uid://b1w6jwr73qw3h" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-06Yamagata.png" id="12_d8tca"]
+[ext_resource type="Texture2D" uid="uid://bbvb8i35ffw8c" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-04Miyagi-o2o0.png" id="11_ouhd8"]
 [ext_resource type="Texture2D" uid="uid://cdt5hnyr8emu1" path="res://🍋images/🪑grayscale/monsters/202310__godot__15-2317--Hamu.png" id="12_fiw8p"]
-[ext_resource type="Texture2D" uid="uid://1ha0fmwgekdf" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-07Fukushima.png" id="13_nr3qt"]
+[ext_resource type="Texture2D" uid="uid://dg55plgcociru" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-05Akita-o2o0.png" id="12_ti082"]
+[ext_resource type="Texture2D" uid="uid://duh5on3o36krg" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-06Yamagata-o2o0.png" id="13_ctleb"]
 [ext_resource type="Texture2D" uid="uid://cavm1ndrs74w1" path="res://🍋images/🪑grayscale/monsters/202310__godot__15-2226--resakai.png" id="13_nx5o7"]
-[ext_resource type="Texture2D" uid="uid://cbk2cfaeeoo8d" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-08Ibaraki.png" id="14_572rg"]
+[ext_resource type="Texture2D" uid="uid://d362jkeed35hw" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-07Fukushima-o2o0.png" id="14_5xwln"]
 [ext_resource type="Texture2D" uid="uid://dovi8ulepkxf8" path="res://🍋images/🪑grayscale/monsters/202310__godot__15-2320--Kodack.png" id="14_gffge"]
-[ext_resource type="Texture2D" uid="uid://cnyijcnwkd4h0" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-09Tochigi.png" id="15_dg47m"]
+[ext_resource type="Texture2D" uid="uid://npmbyrjixj3p" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-08Ibaraki-o2o0.png" id="15_53yxm"]
 [ext_resource type="Texture2D" uid="uid://dlhgydn0tvw10" path="res://🍋images/🪑grayscale/monsters/202310__godot__15-2339--Kifuwarabe.png" id="15_m8r1r"]
+[ext_resource type="Texture2D" uid="uid://cnky8has18mxj" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-09Tochigi-o2o0.png" id="16_i314m"]
 [ext_resource type="Texture2D" uid="uid://dih8hkurgnfir" path="res://🍋images/🪑grayscale/monsters/202310__godot__18-0039--shiroBeer.png" id="16_jtcae"]
-[ext_resource type="Texture2D" uid="uid://b0h0wnxaxv1l8" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-10Gumma.png" id="16_twjla"]
-[ext_resource type="Texture2D" uid="uid://xehbrt6jjsh1" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-11Saitama.png" id="17_i5qx0"]
-[ext_resource type="Texture2D" uid="uid://dt45rb1falhtn" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-12Chiba.png" id="18_fiasy"]
-[ext_resource type="Texture2D" uid="uid://b6l4pdkjd2fhi" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-13Tokyo.png" id="19_svnhf"]
-[ext_resource type="Texture2D" uid="uid://bdfrxbbpwar3i" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-14Kanagawa.png" id="20_ofwfc"]
-[ext_resource type="Texture2D" uid="uid://dj3vvn7mjqfjf" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-15Niigata.png" id="21_5wpax"]
-[ext_resource type="Texture2D" uid="uid://dylx3kap2qq1k" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-16Toyama.png" id="22_fdgi0"]
-[ext_resource type="Texture2D" uid="uid://kcadny3sma4k" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-17Ishikawa.png" id="23_oqocm"]
-[ext_resource type="Texture2D" uid="uid://c3eok1rilvvbo" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-18Fukui.png" id="24_o0ul3"]
-[ext_resource type="Texture2D" uid="uid://ckbu83fxvm1ed" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-19Yamanashi.png" id="25_mf7xb"]
-[ext_resource type="Texture2D" uid="uid://dhwh418r7dl3q" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-20Nagano.png" id="26_8y5ce"]
-[ext_resource type="Texture2D" uid="uid://b4c1iyunovtt4" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-21Gifu.png" id="27_fqqkq"]
-[ext_resource type="Texture2D" uid="uid://0tckmjajuhg1" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-22Shizuoka.png" id="28_2h04o"]
-[ext_resource type="Texture2D" uid="uid://b8fch071kijoe" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-23Aichi.png" id="29_p52cu"]
-[ext_resource type="Texture2D" uid="uid://1gwmkx2cqqaw" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-24Mie.png" id="30_wvqix"]
-[ext_resource type="Texture2D" uid="uid://ddcmynpgxhas3" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-25Shiga.png" id="31_k6csg"]
-[ext_resource type="Texture2D" uid="uid://bh05beh14x24v" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-26Kyoto.png" id="32_xmiql"]
-[ext_resource type="Texture2D" uid="uid://ckclriqniptni" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-27Osaka.png" id="33_5lckd"]
-[ext_resource type="Texture2D" uid="uid://cn23dnc5t7wsu" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-28Hyogo.png" id="34_p8qbr"]
-[ext_resource type="Texture2D" uid="uid://bmi0d46oafdsu" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-29Nara.png" id="35_4nyki"]
-[ext_resource type="Texture2D" uid="uid://dmhrgjde7y1we" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-30Wakayama.png" id="36_5n1ls"]
-[ext_resource type="Texture2D" uid="uid://b4ip6tsbgspeq" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-31Tottori.png" id="37_4jxmd"]
-[ext_resource type="Texture2D" uid="uid://4tdq3nrwld6t" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-32Shimane.png" id="38_fepit"]
-[ext_resource type="Texture2D" uid="uid://ccwd3yuaomr3b" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-33Okayama.png" id="39_oyw4u"]
-[ext_resource type="Texture2D" uid="uid://bd4fmvrlw0i5a" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-34Hiroshima.png" id="40_cxauo"]
-[ext_resource type="Texture2D" uid="uid://b6far7ego1ovn" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-35Yamaguchi.png" id="41_kf0jd"]
-[ext_resource type="Texture2D" uid="uid://b5g180utxwger" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-36Tokushima.png" id="42_q7t2l"]
-[ext_resource type="Texture2D" uid="uid://7eguksexxw37" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-37Kagawa.png" id="43_gdltm"]
-[ext_resource type="Texture2D" uid="uid://db20nyyhsp0fe" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-38Ehime.png" id="44_hcaeh"]
-[ext_resource type="Texture2D" uid="uid://dyidnpv4kmc2q" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-39Kochi.png" id="45_8ogtp"]
-[ext_resource type="Texture2D" uid="uid://bigxlg1yjfrw2" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-40Fukuoka.png" id="46_d0tr8"]
-[ext_resource type="Texture2D" uid="uid://5atitxsxep0j" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-41Saga.png" id="47_xpwxu"]
-[ext_resource type="Texture2D" uid="uid://b201bn6jphia3" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-42Nagasaki.png" id="48_h4288"]
-[ext_resource type="Texture2D" uid="uid://df50l2xvqggxk" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-43Kumamoto.png" id="49_etfxa"]
-[ext_resource type="Texture2D" uid="uid://b1lxvk5pw31h" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-44Oita.png" id="50_b0pkq"]
-[ext_resource type="Texture2D" uid="uid://dqym1tayns585" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-45Miyazaki.png" id="51_g70h4"]
-[ext_resource type="Texture2D" uid="uid://0l36jcl856sc" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-46Kagoshima.png" id="52_fkqyd"]
-[ext_resource type="Texture2D" uid="uid://b8emq2kkvh8vn" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-47Okinawa.png" id="53_0ejst"]
+[ext_resource type="Texture2D" uid="uid://bwrtgqemhh6jc" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-10Gumma-o2o0.png" id="17_4wad8"]
+[ext_resource type="Texture2D" uid="uid://ckwgmnx6kwff3" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-11Saitama-o2o0.png" id="18_pwqlc"]
+[ext_resource type="Texture2D" uid="uid://v0xusc6c74gi" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-12Chiba-o2o0.png" id="19_spluo"]
+[ext_resource type="Texture2D" uid="uid://do616b6vodikr" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-13Tokyo-o2o0.png" id="20_pd57n"]
+[ext_resource type="Texture2D" uid="uid://e17acff6ljmk" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-14Kanagawa-o2o0.png" id="21_v3sob"]
+[ext_resource type="Texture2D" uid="uid://7icvvmwkv46i" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-15Niigata-o2o0.png" id="22_sdsdu"]
+[ext_resource type="Texture2D" uid="uid://c0nna7uf43d32" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-16Toyama-o2o0.png" id="23_5r7h4"]
+[ext_resource type="Texture2D" uid="uid://5w3hnl45n5bc" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-17Ishikawa-o2o0.png" id="24_w784m"]
+[ext_resource type="Texture2D" uid="uid://wwaihqc34ks1" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-18Fukui-o2o0.png" id="25_w5xf6"]
+[ext_resource type="Texture2D" uid="uid://csovwxkqra2f3" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-19Yamanashi-o2o0.png" id="26_ycgwm"]
+[ext_resource type="Texture2D" uid="uid://pbt1uo26kp7" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-20Nagano-o2o0.png" id="27_g4guf"]
+[ext_resource type="Texture2D" uid="uid://bvv05cyaomxar" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-21Gifu-o2o0.png" id="28_ysb33"]
+[ext_resource type="Texture2D" uid="uid://bvuyovbf4hm2t" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-22Shizuoka-o2o0.png" id="29_cr7ld"]
+[ext_resource type="Texture2D" uid="uid://b2c75xeulhd15" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-23Aichi-o2o0.png" id="30_ekerf"]
+[ext_resource type="Texture2D" uid="uid://ufvejkecttsu" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-24Mie-o2o0.png" id="31_gm46n"]
+[ext_resource type="Texture2D" uid="uid://d3eg113qiny61" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-25Shiga-o2o0.png" id="32_wbf8v"]
+[ext_resource type="Texture2D" uid="uid://c16eifslmlclf" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-26Kyoto-o2o0.png" id="33_xsl58"]
+[ext_resource type="Texture2D" uid="uid://drkx8yhkxcgm1" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-27Osaka-o2o0.png" id="34_rpr3j"]
+[ext_resource type="Texture2D" uid="uid://clg0w6rgoct1i" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-28Hyogo-o2o0.png" id="35_x8xue"]
+[ext_resource type="Texture2D" uid="uid://bpu22p5cafwdd" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-29Nara-o2o0.png" id="36_7ekb7"]
+[ext_resource type="Texture2D" uid="uid://bu5mff2lma2qn" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-30Wakayama-o2o0.png" id="37_lwnh5"]
+[ext_resource type="Texture2D" uid="uid://bypsl6fb4xjk2" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-31Tottori-o2o0.png" id="38_c8gao"]
+[ext_resource type="Texture2D" uid="uid://br476p7wdgw5m" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-32Shimane-o2o0.png" id="39_mg6g0"]
+[ext_resource type="Texture2D" uid="uid://okwewnxv20nf" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-33Okayama-o2o0.png" id="40_g3tcu"]
+[ext_resource type="Texture2D" uid="uid://bsyfpxmejnw7b" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-34Hiroshima-o2o0.png" id="41_fsj4f"]
+[ext_resource type="Texture2D" uid="uid://bcjjdxf6gces" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-35Yamaguchi-o2o0.png" id="42_3ne4d"]
+[ext_resource type="Texture2D" uid="uid://us63e8houmph" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-36Tokushima-o2o0.png" id="43_j0edi"]
+[ext_resource type="Texture2D" uid="uid://d1k1kj7osf8y6" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-37Kagawa-o2o0.png" id="44_fsy60"]
+[ext_resource type="Texture2D" uid="uid://dlbxqd6getcjr" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-38Ehime-o2o0.png" id="45_usb28"]
+[ext_resource type="Texture2D" uid="uid://d4jxx2a6psstt" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-39Kochi-o2o0.png" id="46_hufj7"]
+[ext_resource type="Texture2D" uid="uid://ybynwuy5fai5" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-40Fukuoka-o2o0.png" id="47_n6qgc"]
+[ext_resource type="Texture2D" uid="uid://dl1u8bgvhr8nj" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-41Saga-o2o0.png" id="48_oy3od"]
+[ext_resource type="Texture2D" uid="uid://cdwygyupc5buk" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-42Nagasaki-o2o0.png" id="49_l5u3i"]
+[ext_resource type="Texture2D" uid="uid://fiti70570kqv" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-43Kumamoto-o2o0.png" id="50_s6v7i"]
+[ext_resource type="Texture2D" uid="uid://diw67ru4wu51e" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-44Oita-o2o0.png" id="51_0o78f"]
+[ext_resource type="Texture2D" uid="uid://csja86412m24h" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-45Miyazaki-o2o0.png" id="52_ax0m8"]
+[ext_resource type="Texture2D" uid="uid://cjpoqdarukgic" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-46Kagoshima-o2o0.png" id="53_abs5g"]
+[ext_resource type="Texture2D" uid="uid://cwnuy8v8ls4nt" path="res://🍋images/🪑grayscale/1280x720/japanese/202401__game__14-1711--SelectedPrefecture-47Okinawa-o2o0.png" id="54_6hc12"]
 
 [node name="📂🍉VisualNovel" type="Node"]
 
@@ -102,242 +102,242 @@ texture = ExtResource("5_cj82d")
 [node name="ーーーー日本（Ｚ＝０）ーーーー" type="Node" parent="."]
 
 [node name="🗻日本" type="Sprite2D" parent="."]
-texture = ExtResource("6_civvo")
+texture = ExtResource("7_1yf71")
 centered = false
 
 [node name="🗻01北海道" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("7_oc41s")
+texture = ExtResource("8_suujs")
 centered = false
 
 [node name="🗻02青森県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("8_uvdy1")
+texture = ExtResource("9_a144x")
 centered = false
 
 [node name="🗻03岩手県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("9_0bckd")
+texture = ExtResource("10_xrnf2")
 centered = false
 
 [node name="🗻04宮城県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("10_u3sb0")
+texture = ExtResource("11_ouhd8")
 centered = false
 
 [node name="🗻05秋田県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("11_fe2fu")
+texture = ExtResource("12_ti082")
 centered = false
 
 [node name="🗻06山形県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("12_d8tca")
+texture = ExtResource("13_ctleb")
 centered = false
 
 [node name="🗻07福島県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("13_nr3qt")
+texture = ExtResource("14_5xwln")
 centered = false
 
 [node name="🗻08茨城県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("14_572rg")
+texture = ExtResource("15_53yxm")
 centered = false
 
 [node name="🗻09栃木県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("15_dg47m")
+texture = ExtResource("16_i314m")
 centered = false
 
 [node name="🗻10群馬県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("16_twjla")
+texture = ExtResource("17_4wad8")
 centered = false
 
 [node name="🗻11埼玉県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("17_i5qx0")
+texture = ExtResource("18_pwqlc")
 centered = false
 
 [node name="🗻12千葉県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("18_fiasy")
+texture = ExtResource("19_spluo")
 centered = false
 
 [node name="🗻13東京都" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("19_svnhf")
+texture = ExtResource("20_pd57n")
 centered = false
 
 [node name="🗻14神奈川県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("20_ofwfc")
+texture = ExtResource("21_v3sob")
 centered = false
 
 [node name="🗻15新潟県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("21_5wpax")
+texture = ExtResource("22_sdsdu")
 centered = false
 
 [node name="🗻16富山県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("22_fdgi0")
+texture = ExtResource("23_5r7h4")
 centered = false
 
 [node name="🗻17石川県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("23_oqocm")
+texture = ExtResource("24_w784m")
 centered = false
 
 [node name="🗻18福井県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("24_o0ul3")
+texture = ExtResource("25_w5xf6")
 centered = false
 
 [node name="🗻19山梨県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("25_mf7xb")
+texture = ExtResource("26_ycgwm")
 centered = false
 
 [node name="🗻20長野県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("26_8y5ce")
+texture = ExtResource("27_g4guf")
 centered = false
 
 [node name="🗻21岐阜県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("27_fqqkq")
+texture = ExtResource("28_ysb33")
 centered = false
 
 [node name="🗻22静岡県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("28_2h04o")
+texture = ExtResource("29_cr7ld")
 centered = false
 
 [node name="🗻23愛知県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("29_p52cu")
+texture = ExtResource("30_ekerf")
 centered = false
 
 [node name="🗻24三重県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("30_wvqix")
+texture = ExtResource("31_gm46n")
 centered = false
 
 [node name="🗻25滋賀県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("31_k6csg")
+texture = ExtResource("32_wbf8v")
 centered = false
 
 [node name="🗻26京都府" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("32_xmiql")
+texture = ExtResource("33_xsl58")
 centered = false
 
 [node name="🗻27大阪府" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("33_5lckd")
+texture = ExtResource("34_rpr3j")
 centered = false
 
 [node name="🗻28兵庫県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("34_p8qbr")
+texture = ExtResource("35_x8xue")
 centered = false
 
 [node name="🗻29奈良県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("35_4nyki")
+texture = ExtResource("36_7ekb7")
 centered = false
 
 [node name="🗻30和歌山県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("36_5n1ls")
+texture = ExtResource("37_lwnh5")
 centered = false
 
 [node name="🗻31鳥取県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("37_4jxmd")
+texture = ExtResource("38_c8gao")
 centered = false
 
 [node name="🗻32島根県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("38_fepit")
+texture = ExtResource("39_mg6g0")
 centered = false
 
 [node name="🗻33岡山県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("39_oyw4u")
+texture = ExtResource("40_g3tcu")
 centered = false
 
 [node name="🗻34広島県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("40_cxauo")
+texture = ExtResource("41_fsj4f")
 centered = false
 
 [node name="🗻35山口県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("41_kf0jd")
+texture = ExtResource("42_3ne4d")
 centered = false
 
 [node name="🗻36徳島県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("42_q7t2l")
+texture = ExtResource("43_j0edi")
 centered = false
 
 [node name="🗻37香川県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("43_gdltm")
+texture = ExtResource("44_fsy60")
 centered = false
 
 [node name="🗻38愛媛県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("44_hcaeh")
+texture = ExtResource("45_usb28")
 centered = false
 
 [node name="🗻39高知県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("45_8ogtp")
+texture = ExtResource("46_hufj7")
 centered = false
 
 [node name="🗻40福岡県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("46_d0tr8")
+texture = ExtResource("47_n6qgc")
 centered = false
 
 [node name="🗻41佐賀県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("47_xpwxu")
+texture = ExtResource("48_oy3od")
 centered = false
 
 [node name="🗻42長崎県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("48_h4288")
+texture = ExtResource("49_l5u3i")
 centered = false
 
 [node name="🗻43熊本県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("49_etfxa")
+texture = ExtResource("50_s6v7i")
 centered = false
 
 [node name="🗻44大分県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("50_b0pkq")
+texture = ExtResource("51_0o78f")
 centered = false
 
 [node name="🗻45宮崎県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("51_g70h4")
+texture = ExtResource("52_ax0m8")
 centered = false
 
 [node name="🗻46鹿児島県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("52_fkqyd")
+texture = ExtResource("53_abs5g")
 centered = false
 
 [node name="🗻47沖縄県" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("53_0ejst")
+texture = ExtResource("54_6hc12")
 centered = false
 
 [node name="ーーーーウィンドウの中に表示（Ｚ＝９００）ーーーー" type="Node" parent="."]
