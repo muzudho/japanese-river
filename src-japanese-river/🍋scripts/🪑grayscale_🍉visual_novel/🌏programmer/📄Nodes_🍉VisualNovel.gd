@@ -11,7 +11,7 @@ var ancestors = {}
 
 
 # ーーーーーーーー
-# 外パス関連
+# ノード・パス関連
 # ーーーーーーーー
 
 
@@ -30,4 +30,4 @@ func hub():
 
 func _ready():
 	self.hub().message_window_programs = MonkeyHand.create(
-			self.hub().get_gui_programmer_message_windows())			# 探す場所
+			self.hub().get_director_hub().gui_programmer_message_windows())			# 探す場所

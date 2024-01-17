@@ -4,7 +4,7 @@ extends Node
 
 
 # ーーーーーーーー
-# 親パス関連
+# ノード・パス関連
 # ーーーーーーーー
 
 
@@ -15,18 +15,17 @@ func get_director():
 			self.ancestors)
 
 
-# ーーーーーーーー
-# パス関連
-# ーーーーーーーー
+# 監督ハブ取得
+func get_director_hub():
+	return MonkeyHelper.find_ancestor_child(
+			self,
+			&"🌏Director/🛩️Hub",
+			self.ancestors)
 
 
 # プログラムズ・ハブ取得
 func get_programs_hub():
 	return self.get_director().get_node("🌏Programmer/🛩️Hub")
-
-
-func get_telop_coordinator():
-	return self.get_director().get_node("🌏TelopCoordinator")
 
 
 func get_scorer():

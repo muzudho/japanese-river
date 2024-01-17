@@ -35,7 +35,7 @@ var telops = null
 
 
 # ーーーーーーーー
-# 外パス関連
+# ノード・パス関連
 # ーーーーーーーー
 
 
@@ -47,14 +47,17 @@ func get_director():
 			self.ancestors)
 
 
-# イラストレーター取得
-func get_illustrator():
-	return self.get_director().get_node("🌏Illustrator")
+# 監督ハブ取得
+func get_director_hub():
+	return MonkeyHelper.find_ancestor_child(
+			self,
+			&"🌏Director/🛩️Hub",
+			self.ancestors)
 
 
-# メッセージ・ウィンドウズ取得
-func get_gui_programmer_message_windows():
-	return self.get_director().get_node("🌏Programmer_MessageWindow")
+# プログラマー取得
+func owner_node():
+	return self.get_node("../../🌏Programmer")
 
 
 # モンスターの全身像
@@ -90,16 +93,6 @@ func get_scenario_writer():
 # シナリオライター・ハブ取得
 func get_scenario_writers_hub():
 	return self.get_director().get_node("🌏ScenarioWriter/🛩️Hub_🍉VisualNovel")
-
-
-# テロップ・コーディネーター取得
-func get_telop_coordinator():
-	return self.get_director().get_node("🌏TelopCoordinator")
-
-
-# ーーーーーーーー
-# 内パス関連
-# ーーーーーーーー
 
 
 # シナリオ再生機取得
@@ -145,7 +138,7 @@ func _ready():
 			# メッセージ・ウィンドウの名前は `■` で始まるものとする
 			&"■",
 			# 探す場所
-			self.get_gui_programmer_message_windows(),
+			self.get_director_hub().gui_programmer_message_windows(),
 			func(child_node):
 				# メッセージ・ウィンドウのページ送り時、パーサーのロックを解除
 				child_node.on_message_window_page_forward = func():

@@ -4,6 +4,11 @@
 extends Node2D
 
 
+# ーーーーーーーー
+# メモリ関連
+# ーーーーーーーー
+
+
 # 状態。 WaitForKeyConfig, KeyConfig, Ready, Main の４つ
 var current_state = &"WaitForKeyConfig"
 
@@ -29,22 +34,6 @@ func hub():
 	return $"🛩️Hub"
 
 
-func get_grid():
-	return $"Grid"
-
-
-func get_illustrator():
-	return $"🌏Illustrator"
-
-
-func get_key_config_hub():
-	return $"🛩️KeyConfigHub"
-
-
-func get_gui_programmer_message_windows():
-	return $"🌏Programmer_MessageWindow"
-
-
 # プログラムズ・ハブ取得
 func get_programs_hub():
 	return $"🌏Programmer/🛩️Hub"
@@ -62,10 +51,6 @@ func get_scenario_writers_hub():
 # 部門切替取得
 func get_switch_department():
 	return self.get_scenario_writer().get_node("📘DepartmentControl")
-
-
-func get_telop_coordinator():
-	return $"🌏TelopCoordinator"
 
 
 # ーーーーーーーー
@@ -87,11 +72,11 @@ func _ready():
 	# 開発中にいじったものが残ってるかもしれないから、掃除
 	
 	# グリッドは隠す
-	self.get_grid().hide()
+	self.hub().grid().hide()
 	
 	# イラストレーターはとにかく隠す
 	self.search_in_folder(
-			self.get_illustrator(),		# 探す場所
+			self.hub().illustrator(),		# 探す場所
 			func(child_node):
 				return child_node is Sprite2D,
 			func(child_node):
@@ -99,7 +84,7 @@ func _ready():
 	
 	# テロップはとにかく非表示にする
 	self.search_in_folder(
-			self.get_telop_coordinator(),		# 探す場所
+			self.hub().telop_coordinator(),		# 探す場所
 			func(child_node):
 				return child_node is CanvasLayer,
 			func(child_node):
@@ -112,9 +97,9 @@ func _ready():
 	# 監督自身
 	self.show()
 	# イラストレーター
-	self.get_illustrator().show()
+	self.hub().illustrator().show()
 	# テロップ
-	self.get_telop_coordinator().show()
+	self.hub().telop_coordinator().show()
 
 
 # ーーーーーーーー
@@ -151,12 +136,12 @@ func _process(delta):
 
 	# キー・コンフィグが始まる
 	if self.current_state == &"WaitForKeyConfig":
-		self.get_key_config_hub().entry()
+		self.hub().key_config_hub().entry()
 		self.current_state = &"KeyConfig"
 
 	# キー・コンフィグに制御を譲る
 	elif self.current_state == &"KeyConfig":
-		self.get_key_config_hub().on_process(delta)
+		self.hub().key_config_hub().on_process(delta)
 
 	# 主な状態の前に
 	elif self.current_state == &"Ready":
@@ -252,7 +237,7 @@ func _unhandled_input(event):
 
 	# キー・コンフィグに入力の制御を譲れ、という状態
 	elif self.current_state == &"KeyConfig":
-		self.get_key_config_hub().on_unhandled_input(event)
+		self.hub().key_config_hub().on_unhandled_input(event)
 
 	# 主な状態
 	elif self.current_state == &"Main":
@@ -281,13 +266,13 @@ func _unhandled_input(event):
 		var event_as_text = event.as_text()
 		
 		# 文字列をボタン番号に変換
-		var button_number = self.get_key_config_hub().get_button_number_by_text(event_as_text)
+		var button_number = self.hub().key_config_hub().get_button_number_by_text(event_as_text)
 		
 		# ボタン番号を、仮想キー名に変換
-		var virtual_key_name = self.get_key_config_hub().get_virtual_key_name_by_button_number(button_number)
+		var virtual_key_name = self.hub().key_config_hub().get_virtual_key_name_by_button_number(button_number)
 
 		# レバー値
-		var lever_value = self.get_key_config_hub().get_lever_value_by_text(event_as_text)
+		var lever_value = self.hub().key_config_hub().get_lever_value_by_text(event_as_text)
 
 		# 仮想キーを押下したという建付け
 		self.on_virtual_key_input(virtual_key_name, lever_value, vk_operation)
