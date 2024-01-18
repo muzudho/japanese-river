@@ -106,7 +106,7 @@ func search_in_folder(
 
 func on_key_config_entered():
 	# 背景
-	self.monkey().programmer().images.find_node("🗻崎川駅前").visible = true
+	self.monkey().programmer().owner_node().images.find_node("🗻崎川駅前").visible = true
 
 
 func on_key_config_exited():
@@ -132,7 +132,7 @@ func _process(delta):
 		# ーーーーーーーー
 
 		# 最初に実行する部門名
-		self.monkey().programmer().current_department_name = self.monkey().scenario_writer().department_control().start_department_name
+		self.monkey().programmer().owner_node().current_department_name = self.monkey().scenario_writer().department_control().start_department_name
 
 		# パースするな
 		self.monkey().programmer().scenario_player().get_current_department_value().set_parse_lock(true)
@@ -265,7 +265,6 @@ func _unhandled_input(event):
 # 	_unhandled_key_input()
 #	_unhandled_input()
 func on_virtual_key_input(virtual_key, lever_value, vk_operation):
-
 	# 現在のデパートメントに紐づく、項目は辞書に記載されているか？
 	if self.monkey().scenario_writer().on_virtual_key_input(
 			virtual_key,

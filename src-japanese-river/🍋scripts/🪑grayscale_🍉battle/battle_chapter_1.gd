@@ -11,7 +11,7 @@ var ancestor_children_dictionary = {}
 
 
 # ーーーーーーーー
-# パス関連
+# ノード・パス関連
 # ーーーーーーーー
 
 
@@ -27,7 +27,7 @@ func monkey():
 func monkey_of_battle():
 	return MonkeyHelper.find_ancestor_child(
 			self,
-			"🏝️BattleMonkey",
+			"🐵BattleMonkey",
 			self.ancestor_children_dictionary)
 
 

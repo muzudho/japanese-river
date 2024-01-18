@@ -24,6 +24,11 @@ func of_director():
 			self.ancestors)
 
 
+# プログラマー取得
+func owner_node():
+	return self.get_node("../../🌏Programmer")
+
+
 # 助監取得
 func get_assistant_director():
 	return self.monkey().of_director().owner_node().get_node("🌏Programmer")
@@ -31,7 +36,7 @@ func get_assistant_director():
 
 # キャンバス・レイヤー取得
 func get_canvas_layer(message_window_name):
-	return self.monkey().of_director().programmer().telops.find_node("MessageWindow_" + message_window_name)
+	return self.monkey().of_director().programmer().owner_node().telops.find_node("MessageWindow_" + message_window_name)
 
 
 # テキストブロック

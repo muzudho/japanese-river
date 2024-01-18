@@ -61,6 +61,11 @@ func of_director():
 			self.ancestors)
 
 
+# プログラマー取得
+func owner_node():
+	return self.get_node("../../🌏Programmer")
+
+
 # キーコンフィグ監督取得
 func get_director_for_key_config():
 	return self.monkey().of_director().owner_node().get_node("🏝️KeyConfigIsland")

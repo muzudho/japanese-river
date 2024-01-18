@@ -7,6 +7,9 @@ extends Node
 # ーーーーーーーー
 
 
+# 先祖の辞書キャッシュ
+var ancestors = {}
+
 # シナリオ・ドキュメント
 var cached_scenario_document = {}
 
@@ -40,14 +43,6 @@ func owner_node():
 # 部門切替取得
 func department_control():
 	return self.owner_node().get_node("📘DepartmentControl")
-
-
-# ーーーーーーーー
-# メモリ関連
-# ーーーーーーーー
-
-# 先祖の辞書キャッシュ
-var ancestors = {}
 
 
 # ーーーーーーーー
@@ -115,7 +110,7 @@ func on_virtual_key_input(
 		lever_value,
 		vk_operation):
 
-	var cur_department_name = self.monkey().of_director().programmer().current_department_name
+	var cur_department_name = self.monkey().of_director().programmer().owner_node().current_department_name
 
 	# 現在のデパートメントに紐づく、項目は辞書に記載されているか？
 	if vk_operation == &"VKO_Pressed" and cur_department_name in self.department_control().key_pressed_stage_directions:
