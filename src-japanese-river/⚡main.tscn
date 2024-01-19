@@ -264,6 +264,8 @@ script = ExtResource("34_7x21s")
 [node name="🐵Monkey" type="Node" parent="👤Programmer"]
 script = ExtResource("39_w7ugv")
 
+[node name="📂KayConfig_🍉KeyConfig" parent="👤Programmer" instance=ExtResource("62_isghc")]
+
 [node name="📂ScenarioPlayer_🍉VisualNovel" parent="👤Programmer" instance=ExtResource("41_kb3a0")]
 
 [node name="👤Programmer_MessageWindow" type="Node" parent="."]
@@ -527,5 +529,3 @@ script = ExtResource("70_mcty4")
 
 [node name="MonsterData" type="Node" parent="👤Scorer"]
 script = ExtResource("71_vwn1b")
-
-[node name="🏝️KeyConfigIsland" parent="." instance=ExtResource("62_isghc")]
