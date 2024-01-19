@@ -27,7 +27,7 @@ var is_department_not_found = false
 func monkey():
 	return MonkeyHelper.find_ancestor_child(
 			self,
-			"🌏Programmer/🐵Monkey",
+			"👤Programmer/🐵Monkey",
 			self.ancestors)
 
 
@@ -40,7 +40,7 @@ func get_all_instruction_codes():
 				# 命令のノード名は `📗` で始まるものとする
 				&"📗",
 				# 探す場所
-				# 本当は `🌏Programmer` ノードの下のどこかにある `📂ScenarioPlayer_🍉VisualNovel` ノードのさらに下の `📂Instructions` ノードの下を探して欲しいが。
+				# 本当は `👤Programmer` ノードの下のどこかにある `📂ScenarioPlayer_🍉VisualNovel` ノードのさらに下の `📂Instructions` ノードの下を探して欲しいが。
 				self.monkey().of_staff().programmer().owner_node(),
 				func(child_node):
 					# コードにノード名を紐づける
