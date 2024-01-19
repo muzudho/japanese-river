@@ -534,4 +534,4 @@ script = ExtResource("70_mcty4")
 [node name="MonsterData" type="Node" parent="👤Scorer"]
 script = ExtResource("71_vwn1b")
 
-[node name="📂KayConfig_🍉KeyConfig" parent="." instance=ExtResource("62_isghc")]
+[node name="📂KeyConfig_🍉KeyConfig" parent="." instance=ExtResource("62_isghc")]
