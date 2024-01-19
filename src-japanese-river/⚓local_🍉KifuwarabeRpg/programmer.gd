@@ -71,7 +71,7 @@ func _ready():
 			self.monkey().of_staff().musician_bg_musics())		# 探す場所
 
 	self.images = MonkeyHand.create(
-			self.monkey().of_staff().illustrator())			# 探す場所
+			self.monkey().of_staff().illustrator_node())			# 探す場所
 
 	self.sound_fx = MonkeyHand.create(
 			self.monkey().of_staff().musician_sound_fx())			# 探す場所
@@ -123,11 +123,11 @@ func ready_in_staff():
 	# 開発中にいじったものが残ってるかもしれないから、掃除
 	
 	# グリッドは隠す
-	self.monkey().of_staff().grid().hide()
+	self.monkey().of_staff().grid_node().hide()
 	
 	# イラストレーターはとにかく隠す
 	MonkeyHelper.search_in_folder(
-			self.monkey().of_staff().illustrator(),		# 探す場所
+			self.monkey().of_staff().illustrator_node(),		# 探す場所
 			func(child_node):
 				return child_node is Sprite2D,
 			func(child_node):
@@ -150,7 +150,7 @@ func ready_in_staff():
 	# 監督自身
 	self.monkey().of_staff().owner_node().show()
 	# イラストレーター
-	self.monkey().of_staff().illustrator().show()
+	self.monkey().of_staff().illustrator_node().show()
 	# テロップ
 	self.monkey().of_staff().telop_coordinator().show()
 
@@ -162,7 +162,9 @@ func ready_in_staff():
 
 func on_key_config_entered():
 	# 背景
-	self.images.find_node("🗻崎川駅前").visible = true
+	self.images.find_node(
+		str(self.monkey().of_staff().config_node().key_config_background_image_name)
+	).visible = true
 
 
 func on_key_config_exited():
