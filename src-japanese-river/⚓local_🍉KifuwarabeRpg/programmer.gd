@@ -9,7 +9,6 @@ var Department = load("res://🍋scripts/🪑grayscale_🍉visual_novel/departme
 # メモリ関連
 # ーーーーーーーー
 
-
 # 状態。 WaitForKeyConfig, KeyConfig, Ready, Main の４つ
 var current_state = &"WaitForKeyConfig"
 # 現在の部門（StringName型）
@@ -19,8 +18,6 @@ var current_bg_music_name = null
 # 現在鳴っている効果音のノード名
 var current_se_name = null
 
-# 全角数字
-var zenkaku_numbers = ["０", "１", "２", "３", "４", "５", "６", "７", "８", "９"]
 # デパートメント変数辞書（キー：StringName型）
 var departments = {}
 # ト書き（シナリオの命令パラグラフ）で使える変数の辞書
@@ -32,7 +29,6 @@ var sleep_seconds = 0.0
 # ーーーーーーーー
 # アドオン・スロット
 # ーーーーーーーー
-
 
 # BGMノードのキャッシュ
 var bg_musics = null
@@ -54,7 +50,6 @@ var telops = null
 # ノード・パス関連
 # ーーーーーーーー
 
-
 # 猿取得
 func monkey():
 	return $"🐵Monkey"
@@ -65,8 +60,6 @@ func monkey():
 # ーーーーーーーー
 
 func _ready():
-
-	
 	self.bg_musics = MonkeyHand.create(
 			self.monkey().of_staff().musician_bg_musics())		# 探す場所
 
@@ -81,9 +74,9 @@ func _ready():
 
 
 	self.message_window_programs = MonkeyHand.create(
-		self.monkey().of_staff().gui_programmer_message_windows())			# 探す場所
+			self.monkey().of_staff().gui_programmer_message_windows())			# 探す場所
 
-
+	
 	# メッセージ・ウィンドウに対応関数紐づけ
 	MonkeyHelper.search_node_name_begins_with(
 			# メッセージ・ウィンドウの名前は `■` で始まるものとする
@@ -107,14 +100,14 @@ func _ready():
 		department_value.stack_of_last_displayed_message_window.push_back(&"■FullScreen")	# StringName 型 シンタックス・シュガー
 
 		# 先頭セクションの名前
-		department_value.section_name = self.monkey().of_staff().scenario_writer().owner_node().get_merged_scenario_document(department_name).keys()[0]
+		department_value.section_name = self.monkey().of_staff().programmer().scenario_player_node().get_merged_scenario_document(department_name).keys()[0]
 
 		self.departments[department_name] = department_value
 
 
 func ready_in_staff():
 	# キャッシュを作成するだけ
-	var _all_instruction_code = self.monkey().scenario_player_node().get_all_instruction_codes()
+	var _all_instruction_code = self.monkey().scenario_player().get_all_instruction_codes()
 
 	# ーーーーーーーー
 	# 非表示
@@ -159,7 +152,6 @@ func ready_in_staff():
 # 入力
 # ーーーーーーーー
 
-
 func on_key_config_entered():
 	# 背景
 	self.images.find_node(
@@ -171,145 +163,17 @@ func on_key_config_exited():
 	self.current_state = &"Ready"
 
 
-# テキストボックスなどにフォーカスが無いときのキー入力を拾う
-#
-# 子要素から親要素の順で呼び出されるようだ。
-# このプログラムでは　ルート　だけで　キー入力を拾うことにする
-func _unhandled_key_input(event):
-
-	# キー・コンフィグのために、何もするな
-	if self.current_state == &"WaitForKeyConfig":
-		pass
-
-	# キー・コンフィグ中なので、何もするな
-	elif self.current_state == &"KeyConfig":
-		pass
-
-	# 主要な状態
-	elif self.current_state == &"Main":
-
-		var vk_operation = null
-
-		# 何かキーを押したとき
-		if event.is_pressed():
-			print("［監督］　キー入力　押下")
-			vk_operation = &"VKO_Pressed"
-		
-		# 何かキーを離したとき
-		elif event.is_released():
-			print("［監督］　キー入力　リリース")
-			vk_operation = &"VKO_Released"
-		
-		# それ以外には対応してない
-		else:
-			print("［監督］　キー入力　▲！想定外")
-			return
-
-		# 以下、仮想キー
-
-		# このゲーム独自の仮想キーに変換
-		var virtual_key_name = null
-		
-		# エンターキー押下
-		if event.keycode == KEY_ENTER:
-			virtual_key_name = &"VK_Ok"
-
-		# エスケープキー押下
-		elif event.keycode == KEY_ESCAPE:
-			virtual_key_name = &"VK_Cancel"
-
-		# ［Ｒ］キー押下（後でスーパーファミコンの R キーにしようと思っていたアルファベット）
-		elif event.keycode == KEY_R:
-			virtual_key_name = &"VK_FastForward"
-		
-		# それ以外のキーは無視する（十字キーや Ctrl キーの判定を取り除くのが難しい）
-		else:
-			return
-
-		var lever_value = 0.0
-
-		# 仮想キーを押下したという建付け
-		self.on_virtual_key_input(virtual_key_name, lever_value, vk_operation)
-
-
-# テキストボックスなどにフォーカスが無いときの入力をとにかく拾う
-func _unhandled_input(event):
-
-	# キー・コンフィグのために何もするな、という状態
-	if self.current_state == &"WaitForKeyConfig":
-		pass
-
-	# キー・コンフィグに入力の制御を譲れ、という状態
-	elif self.current_state == &"KeyConfig":
-		self.monkey().key_config_node().on_unhandled_input(event)
-
-	# 主な状態
-	elif self.current_state == &"Main":
-
-		var vk_operation = null
-
-		# 何かキーを押したとき
-		if event.is_pressed():
-			#print("［監督］　入力　押下")
-			vk_operation = &"VKO_Pressed"
-		
-		# 何かキーを離したとき
-		elif event.is_released():
-			#print("［監督］　入力　リリース")
-			vk_operation = &"VKO_Released"
-		
-		# それ以外には対応してない
-		else:
-			print("［監督］　入力　▲！想定外")
-			return
-
-		# ーーーーーーーー
-		# 以下、仮想キー
-		# ーーーーーーーー
-		# 文字列だけだと、押したのか放したのか分からない
-		var event_as_text = event.as_text()
-		
-		# 文字列をボタン番号に変換
-		var button_number = self.monkey().key_config_node().get_button_number_by_text(event_as_text)
-		
-		# ボタン番号を、仮想キー名に変換
-		var virtual_key_name = self.monkey().key_config_node().get_virtual_key_name_by_button_number(button_number)
-
-		# レバー値
-		var lever_value = self.monkey().key_config_node().get_lever_value_by_text(event_as_text)
-
-		# 仮想キーを押下したという建付け
-		self.on_virtual_key_input(virtual_key_name, lever_value, vk_operation)
-
-
-# 仮想キーを押下したという建付け
-#
-# 呼出し元:
-# 	_unhandled_key_input()
-#	_unhandled_input()
-func on_virtual_key_input(virtual_key, lever_value, vk_operation):
-	# 現在のデパートメントに紐づく、項目は辞書に記載されているか？
-	if self.monkey().of_staff().scenario_writer().owner_node().on_virtual_key_input(
-			virtual_key,
-			lever_value,
-			vk_operation):
-		# 入力されたキーへの対処が完了したなら、処理を抜ける
-		return
-
-	# シナリオライター・ハブで　この入力をスルーしたなら、以降の処理を続ける
-	print("［監督］　仮想キー（" + virtual_key + "）　レバー値：" + str(lever_value) + "　操作：" + vk_operation)
-
-	# メッセージ・ウィンドウへ渡す
-	self.monkey().scenario_player_node().get_current_message_window_gui().on_virtual_key_input(virtual_key, lever_value, vk_operation)
-
-
 # ーーーーーーーー
 # その他
 # ーーーーーーーー
 
-
+# アプリケーション全体の時計
+#
+#	この中で、時計を振り分ける
 func _process(delta):
 
+	# キー・コンフィグは　フレームワークに収まらないので、ハードコーディングします
+	#
 	# キー・コンフィグが始まる
 	if self.current_state == &"WaitForKeyConfig":
 		self.monkey().key_config_node().entry()
@@ -319,7 +183,7 @@ func _process(delta):
 	elif self.current_state == &"KeyConfig":
 		self.monkey().key_config_node().on_process(delta)
 
-	# 主な状態の前に
+	# 以降の状態の前に
 	elif self.current_state == &"Ready":
 		self.current_state = &"Main"
 		# ーーーーーーーー
@@ -336,10 +200,14 @@ func _process(delta):
 		self.monkey().scenario_player_node().play_section()
 
 		# 伝言窓を、一時的に居なくなっていたのを解除する
-		self.monkey().scenario_player_node().get_current_message_window_gui().set_appear_subtree(true)
+		self.monkey().scenario_player().get_current_message_window_gui().set_appear_subtree(true)
 
-	# 主な状態に制御を譲る
+	# 以降の状態。フレームワーク
 	elif self.current_state == &"Main":
+		
+		# TODO 現在の部門が　シナリオ・プレイヤーに時計を渡したいか、そうではないか判別したい
+		
+		# シナリオ・プレイヤーに時計を譲る
 		self.monkey().scenario_player_node().on_process(delta)
 
 
@@ -394,47 +262,6 @@ func expand_variables(target_before_change):
 	else:
 		#print("［助監　変数展開］　対象なし　非テキスト")
 		return target_before_change
-
-
-# １番外側でダブルクォーテーションが挟んでいれば、そのダブルクォーテーションを外します
-func trim_double_quotation(line):
-	if 2 <= line.length() and line[0]=="\"" and line[-1]=="\"":
-		return line.substr(1, line.length()-2)
-	
-	return line
-
-
-# 先頭行と、それ以外に分けます。できなければヌル
-func split_head_line_or_tail(text):
-	# 最初の改行を見つける
-	var index = text.find("\n")
-	
-	if index < 0:
-		return null
-	
-	var head = text.substr(0, index)
-	var tail = text.substr(index+1)
-	# print("［助監］　head：　[" + head + "]")
-	# print("［助監］　tail：　[" + tail + "]")
-	return [head, tail]
-
-
-# 数値を全角テキストに変換
-func number_to_zenkaku_text(number, figures):
-	var zenkaku_text = ""
-	
-	while 0 < number:
-		var zenkaku_num = self.zenkaku_numbers[number % 10]
-		number /= 10
-		
-		zenkaku_text = zenkaku_num + zenkaku_text
-	
-	# 左側に全角空白を詰める
-	var spaces = figures - zenkaku_text.length()
-	for i in range(spaces):
-		zenkaku_text = "　" + zenkaku_text
-		
-	return zenkaku_text
 
 
 # 部門変数取得
