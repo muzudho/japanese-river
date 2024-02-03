@@ -27,7 +27,7 @@ func monkey():
 func monkey_of_battle():
 	return MonkeyHelper.find_ancestor_child(
 			self,
-			"🏝️BattleMonkey",
+			"🐵BattleMonkey",
 			self.ancestor_children_dictionary)
 
 
