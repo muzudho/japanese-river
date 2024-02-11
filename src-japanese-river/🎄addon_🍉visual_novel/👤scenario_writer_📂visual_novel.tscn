@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_choices_mappings.gd" id="3_k2u6m"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_chapter_1.gd" id="4_spo3j"]
 
-[node name="📂🍉VisualNovel" type="Node"]
+[node name="📂🍉JapaneseRiver" type="Node"]
 
 [node name="📗会話部門_🍉JapaneseRiver" type="Node" parent="."]
 
