@@ -314,12 +314,12 @@ script = ExtResource("60_f7oqn")
 
 [node name="📂🍉JapaneseRiver" type="Node" parent="👤ScenarioWriter"]
 
-[node name="📗会話部門_🍉VisualNovel" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver"]
+[node name="📗会話部門_🍉JapaneseRiver" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver"]
 
-[node name="📃選択肢と飛び先" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉VisualNovel"]
+[node name="📃選択肢と飛び先" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉JapaneseRiver"]
 script = ExtResource("47_byi5j")
 
-[node name="📃はじまり" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉VisualNovel"]
+[node name="📃はじまり" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉JapaneseRiver"]
 script = ExtResource("48_ks5c6")
 
 [node name="📗会話システムメニュー部門_🍉VisualNovel" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver"]

@@ -7,12 +7,12 @@
 
 [node name="📂🍉VisualNovel" type="Node"]
 
-[node name="📗会話部門_🍉VisualNovel" type="Node" parent="."]
+[node name="📗会話部門_🍉JapaneseRiver" type="Node" parent="."]
 
-[node name="📃選択肢と飛び先" type="Node" parent="📗会話部門_🍉VisualNovel"]
+[node name="📃選択肢と飛び先" type="Node" parent="📗会話部門_🍉JapaneseRiver"]
 script = ExtResource("1_isuob")
 
-[node name="📃はじまり" type="Node" parent="📗会話部門_🍉VisualNovel"]
+[node name="📃はじまり" type="Node" parent="📗会話部門_🍉JapaneseRiver"]
 script = ExtResource("2_t0ivk")
 
 [node name="📗会話システムメニュー部門_🍉VisualNovel" type="Node" parent="."]

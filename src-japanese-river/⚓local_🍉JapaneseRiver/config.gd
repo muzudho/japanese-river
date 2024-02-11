@@ -25,4 +25,4 @@ var key_config_background_image_name = &"🗻崎川駅前"
 # ーーーーーーーー
 
 # 最初に実行する部門をここに書く。頭に「📗」を付けているのは見やすさのためで、付けなくても構わない
-var start_department_name = &"📗会話部門_🍉VisualNovel"
+var start_department_name = &"📗会話部門_🍉JapaneseRiver"
