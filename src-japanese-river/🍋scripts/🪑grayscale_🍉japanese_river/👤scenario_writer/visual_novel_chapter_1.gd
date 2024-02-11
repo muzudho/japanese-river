@@ -98,7 +98,7 @@ var scenario_document = {
 		"""\
 		!
 		img:	{{selected_image}},		hide
-		var:	selected_image,			🗻01北海道
+		var:	  selected_image,		🗻01北海道
 		img:	{{selected_image}}
 		choice:	1, 2
 		""",
@@ -111,7 +111,7 @@ var scenario_document = {
 		"""\
 		!
 		img:	{{selected_image}},		hide
-		var:	selected_image,			🗻02青森県
+		var:	  selected_image,		🗻02青森県
 		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
@@ -125,7 +125,9 @@ var scenario_document = {
 	"¶秋田県":[
 		"""\
 		!
-		img:	🗻05秋田県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻05秋田県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -139,7 +141,9 @@ var scenario_document = {
 	"¶岩手県":[
 		"""\
 		!
-		img:	🗻03岩手県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻03岩手県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -152,7 +156,9 @@ var scenario_document = {
 	"¶山形県":[
 		"""\
 		!
-		img:	🗻06山形県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻06山形県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -166,7 +172,9 @@ var scenario_document = {
 	"¶宮城県":[
 		"""\
 		!
-		img:	🗻04宮城県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻04宮城県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -180,7 +188,9 @@ var scenario_document = {
 	"¶福島県":[
 		"""\
 		!
-		img:	🗻07福島県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻07福島県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
 		"""\
@@ -196,7 +206,9 @@ var scenario_document = {
 	"¶群馬県":[
 		"""\
 		!
-		img:	🗻10群馬県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻10群馬県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6
 		""",
 		"""\
@@ -211,7 +223,9 @@ var scenario_document = {
 	"¶栃木県":[
 		"""\
 		!
-		img:	🗻09栃木県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻09栃木県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -225,7 +239,9 @@ var scenario_document = {
 	"¶茨城県":[
 		"""\
 		!
-		img:	🗻08茨城県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻08茨城県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -239,7 +255,9 @@ var scenario_document = {
 	"¶千葉県":[
 		"""\
 		!
-		img:	🗻12千葉県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻12千葉県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -253,7 +271,9 @@ var scenario_document = {
 	"¶埼玉県":[
 		"""\
 		!
-		img:	🗻11埼玉県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻11埼玉県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7, 8
 		""",
 		"""\
@@ -270,7 +290,9 @@ var scenario_document = {
 	"¶東京都":[
 		"""\
 		!
-		img:	🗻13東京都
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻13東京都
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -284,7 +306,9 @@ var scenario_document = {
 	"¶神奈川県":[
 		"""\
 		!
-		img:	🗻14神奈川県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻14神奈川県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -297,7 +321,9 @@ var scenario_document = {
 	"¶新潟県":[
 		"""\
 		!
-		img:	🗻15新潟県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻15新潟県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6
 		""",
 		"""\
@@ -312,7 +338,9 @@ var scenario_document = {
 	"¶長野県":[
 		"""\
 		!
-		img:	🗻20長野県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻20長野県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7, 8, 9
 		""",
 		"""\
@@ -330,7 +358,9 @@ var scenario_document = {
 	"¶富山県":[
 		"""\
 		!
-		img:	🗻16富山県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻16富山県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -344,7 +374,9 @@ var scenario_document = {
 	"¶石川県":[
 		"""\
 		!
-		img:	🗻17石川県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻17石川県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -357,7 +389,9 @@ var scenario_document = {
 	"¶福井県":[
 		"""\
 		!
-		img:	🗻18福井県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻18福井県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -371,7 +405,9 @@ var scenario_document = {
 	"¶岐阜県":[
 		"""\
 		!
-		img:	🗻21岐阜県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻21岐阜県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7, 8
 		""",
 		"""\
@@ -388,7 +424,9 @@ var scenario_document = {
 	"¶山梨県":[
 		"""\
 		!
-		img:	🗻19山梨県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻19山梨県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6
 		""",
 		"""\
@@ -403,7 +441,9 @@ var scenario_document = {
 	"¶静岡県":[
 		"""\
 		!
-		img:	🗻22静岡県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻22静岡県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -417,7 +457,9 @@ var scenario_document = {
 	"¶愛知県":[
 		"""\
 		!
-		img:	🗻23愛知県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻23愛知県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -431,7 +473,9 @@ var scenario_document = {
 	"¶滋賀県":[
 		"""\
 		!
-		img:	🗻25滋賀県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻25滋賀県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -445,7 +489,9 @@ var scenario_document = {
 	"¶京都府":[
 		"""\
 		!
-		img:	🗻26京都府
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻26京都府
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
 		"""\
@@ -461,7 +507,9 @@ var scenario_document = {
 	"¶兵庫県":[
 		"""\
 		!
-		img:	🗻28兵庫県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻28兵庫県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6
 		""",
 		"""\
@@ -476,7 +524,9 @@ var scenario_document = {
 	"¶三重県":[
 		"""\
 		!
-		img:	🗻24三重県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻24三重県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
 		"""\
@@ -492,7 +542,9 @@ var scenario_document = {
 	"¶奈良県":[
 		"""\
 		!
-		img:	🗻29奈良県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻29奈良県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -506,7 +558,9 @@ var scenario_document = {
 	"¶和歌山県":[
 		"""\
 		!
-		img:	🗻30和歌山県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻30和歌山県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -519,7 +573,9 @@ var scenario_document = {
 	"¶大阪府":[
 		"""\
 		!
-		img:	🗻27大阪府
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻27大阪府
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -533,7 +589,9 @@ var scenario_document = {
 	"¶鳥取県":[
 		"""\
 		!
-		img:	🗻31鳥取県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻31鳥取県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -547,7 +605,9 @@ var scenario_document = {
 	"¶島根県":[
 		"""\
 		!
-		img:	🗻32島根県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻32島根県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -560,7 +620,9 @@ var scenario_document = {
 	"¶山口県":[
 		"""\
 		!
-		img:	🗻35山口県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻35山口県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -573,7 +635,9 @@ var scenario_document = {
 	"¶岡山県":[
 		"""\
 		!
-		img:	🗻33岡山県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻33岡山県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -587,7 +651,9 @@ var scenario_document = {
 	"¶広島県":[
 		"""\
 		!
-		img:	🗻34広島県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻34広島県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5, 6
 		""",
 		"""\
@@ -602,7 +668,9 @@ var scenario_document = {
 	"¶香川県":[
 		"""\
 		!
-		img:	🗻37香川県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻37香川県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -615,7 +683,9 @@ var scenario_document = {
 	"¶徳島県":[
 		"""\
 		!
-		img:	🗻36徳島県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻36徳島県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -629,7 +699,9 @@ var scenario_document = {
 	"¶愛媛県":[
 		"""\
 		!
-		img:	🗻38愛媛県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻38愛媛県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -643,7 +715,9 @@ var scenario_document = {
 	"¶高知県":[
 		"""\
 		!
-		img:	🗻39高知県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻39高知県
+		img:	{{selected_image}}
 		choice:	1, 2, 3
 		""",
 		"""\
@@ -655,7 +729,9 @@ var scenario_document = {
 	"¶福岡県":[
 		"""\
 		!
-		img:	🗻40福岡県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻40福岡県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -669,7 +745,9 @@ var scenario_document = {
 	"¶佐賀県":[
 		"""\
 		!
-		img:	🗻41佐賀県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻41佐賀県
+		img:	{{selected_image}}
 		choice:	1, 2, 3
 		""",
 		"""\
@@ -681,7 +759,9 @@ var scenario_document = {
 	"¶長崎県":[
 		"""\
 		!
-		img:	🗻42長崎県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻42長崎県
+		img:	{{selected_image}}
 		choice:	1, 2
 		""",
 		"""\
@@ -692,7 +772,9 @@ var scenario_document = {
 	"¶大分県":[
 		"""\
 		!
-		img:	🗻44大分県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻44大分県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -705,7 +787,9 @@ var scenario_document = {
 	"¶熊本県":[
 		"""\
 		!
-		img:	🗻43熊本県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻43熊本県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4, 5
 		""",
 		"""\
@@ -719,7 +803,9 @@ var scenario_document = {
 	"¶宮崎県":[
 		"""\
 		!
-		img:	🗻45宮崎県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻45宮崎県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -732,7 +818,9 @@ var scenario_document = {
 	"¶鹿児島県":[
 		"""\
 		!
-		img:	🗻46鹿児島県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻46鹿児島県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
@@ -745,7 +833,9 @@ var scenario_document = {
 	"¶沖縄県":[
 		"""\
 		!
-		img:	🗻47沖縄県
+		img:	{{selected_image}},		hide
+		var:	  selected_image,		🗻47沖縄県
+		img:	{{selected_image}}
 		choice:	1, 2
 		""",
 		"""\
