@@ -96,6 +96,7 @@ var scenario_document = {
 		"""\
 		!
 		img:	🗻01北海道
+		var:	selected_image,		🗻01北海道
 		choice:	1, 2
 		""",
 		"""\
@@ -106,6 +107,7 @@ var scenario_document = {
 	"¶青森県":[
 		"""\
 		!
+		img:	{{selected_image}},		hide
 		img:	🗻02青森県
 		choice:	1, 2, 3, 4
 		""",
