@@ -4,32 +4,33 @@
 [ext_resource type="Texture2D" uid="uid://bkfsr571tdwqf" path="res://🍋images/🪑grayscale/1280x720/grid.png" id="2_ivwoj"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/config.gd" id="2_ksf2l"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/staff_monkey.gd" id="3_3rpgy"]
+[ext_resource type="Texture2D" uid="uid://dgxwlwrrmu7cs" path="res://🍋images/🪑grayscale/1280x720/battle_scene/battle_scene_3.png" id="6_7vyrp"]
+[ext_resource type="Texture2D" uid="uid://h40kir6k3rxw" path="res://🍋images/🪑grayscale/1280x720/windows/window_at_bottom.png" id="12_5jolw"]
+[ext_resource type="Texture2D" uid="uid://brryggn3ofxsy" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_1.png" id="13_ict4m"]
+[ext_resource type="Texture2D" uid="uid://c42aedfyn3ie3" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_2.png" id="14_u4sc4"]
+[ext_resource type="Texture2D" uid="uid://b70fphsmj0bku" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_3.png" id="15_dtifu"]
+[ext_resource type="Texture2D" uid="uid://bw6jruqwbenlc" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_4.png" id="16_jt578"]
+[ext_resource type="Texture2D" uid="uid://cot0sqrmfbptg" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_5.png" id="17_1hga5"]
+[ext_resource type="Texture2D" uid="uid://by1nkn5qeooys" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_6.png" id="18_wfba6"]
+[ext_resource type="Texture2D" uid="uid://d2twxf0e8dkj0" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_7.png" id="19_nxo8s"]
+[ext_resource type="Texture2D" uid="uid://df3qef2yydgfn" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_8.png" id="20_540wy"]
+[ext_resource type="Texture2D" uid="uid://c5fbng1pd6rqf" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_9.png" id="21_n1du6"]
+[ext_resource type="Texture2D" uid="uid://bhaal2avn26fq" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_10.png" id="22_a7r6s"]
+[ext_resource type="Texture2D" uid="uid://6xge0otbrnct" path="res://🍋images/🪑grayscale/1280x720/transition_1/transition_1_frame_11.png" id="23_jm2ol"]
 [ext_resource type="PackedScene" uid="uid://d245mt0k8bh53" path="res://🎄addon_🍉key_config/👤illustrator.tscn" id="27_dp8m2"]
 [ext_resource type="PackedScene" uid="uid://b2ubr7dn0hb1m" path="res://🎄addon_🍉japanese_river/👤illustrator.tscn" id="28_iuuq5"]
-[ext_resource type="Texture2D" uid="uid://dgxwlwrrmu7cs" path="res://🍋images/🪑grayscale/1280x720/battle_scene_3.png" id="31_3w7mi"]
-[ext_resource type="Texture2D" uid="uid://brryggn3ofxsy" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_1.png" id="32_l43dy"]
-[ext_resource type="Texture2D" uid="uid://c42aedfyn3ie3" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_2.png" id="33_63jpw"]
 [ext_resource type="PackedScene" uid="uid://c5rj8mk8bwirj" path="res://🎄addon_🍉key_config/👤musician_🌏bg_musics.tscn" id="34_3hqwd"]
-[ext_resource type="Texture2D" uid="uid://b70fphsmj0bku" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_3.png" id="34_x34j5"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer.gd" id="35_0eg4q"]
 [ext_resource type="PackedScene" uid="uid://tpups3rpk2j8" path="res://🎄addon_🍉visual_novel/👤musician_🌏bg_musics.tscn" id="35_65fhg"]
-[ext_resource type="Texture2D" uid="uid://bw6jruqwbenlc" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_4.png" id="35_jcaiw"]
-[ext_resource type="Texture2D" uid="uid://cot0sqrmfbptg" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_5.png" id="36_1keft"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_monkey.gd" id="36_8x268"]
 [ext_resource type="PackedScene" uid="uid://ddu67m5n2ad5u" path="res://🎄addon_🍉key_config/👤musician_🌏sound_fx.tscn" id="37_nknd3"]
-[ext_resource type="Texture2D" uid="uid://by1nkn5qeooys" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_6.png" id="37_tdxrv"]
 [ext_resource type="PackedScene" uid="uid://c0trqytdpqte8" path="res://🎄addon_🍉visual_novel/👤programmer_📂department_controller.tscn" id="38_2gg01"]
 [ext_resource type="PackedScene" uid="uid://bkfvsu8du416f" path="res://🎄addon_🍉visual_novel/👤musician_🌏sound_fx.tscn" id="38_kb7xl"]
-[ext_resource type="Texture2D" uid="uid://d2twxf0e8dkj0" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_7.png" id="38_vlm38"]
-[ext_resource type="Texture2D" uid="uid://df3qef2yydgfn" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_8.png" id="39_nr2kt"]
-[ext_resource type="Texture2D" uid="uid://c5fbng1pd6rqf" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_9.png" id="40_25lxp"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉visual_novel/👤programmer/📂message_windows/its_globe.gd" id="40_rws0b"]
 [ext_resource type="AudioStream" uid="uid://efn4gabjs803" path="res://🍋audio_bg_musics/🪑maou_audio/maou_game_rock28.ogg" id="41_2y5jy"]
-[ext_resource type="Texture2D" uid="uid://bhaal2avn26fq" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_10.png" id="41_j4orm"]
 [ext_resource type="PackedScene" uid="uid://daqtppg5rtuat" path="res://🎄addon_🍉visual_novel/👤programmer_🎬scenario_player.tscn" id="41_kb3a0"]
 [ext_resource type="AudioStream" uid="uid://bgqqv0r1evda1" path="res://🍋audio_bg_musics/🪑maou_audio/maou_bgm_cyber06.ogg" id="42_j4tsf"]
 [ext_resource type="PackedScene" uid="uid://bpcq5iy2or1wx" path="res://🎄addon_🍉visual_novel/👤scenario_writer_🐵monkey.tscn" id="42_lg1ip"]
-[ext_resource type="Texture2D" uid="uid://6xge0otbrnct" path="res://🍋images/🪑grayscale/1280x720/transition_1_frame_11.png" id="42_qrihd"]
 [ext_resource type="PackedScene" uid="uid://kwp2d5vfbko3" path="res://🎄addon_🍉battle/👤programmer_🌏message_windows.tscn" id="43_edcqs"]
 [ext_resource type="AudioStream" uid="uid://cil7820mlikbo" path="res://🍋audio_bg_musics/🪑maou_audio/maou_bgm_neorock14.ogg" id="43_k3tfj"]
 [ext_resource type="AudioStream" uid="uid://cgfwug3u405gx" path="res://🍋audio_bg_musics/🪑maou_audio/maou_bgm_orchestra12.ogg" id="44_beusv"]
@@ -40,7 +41,6 @@
 [ext_resource type="PackedScene" uid="uid://7d1c4sgwele3" path="res://🎄addon_🍉visual_novel/👤telop_coordinator.tscn" id="58_gje64"]
 [ext_resource type="PackedScene" uid="uid://b6hdyq1apqr5p" path="res://🎄addon_🍉japanese_river/👤telop_coordinator.tscn" id="59_dfvaw"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉kifuwarabe_rpg/scenario_writer/switch_department.gd" id="60_f7oqn"]
-[ext_resource type="Texture2D" uid="uid://h40kir6k3rxw" path="res://🍋images/🪑grayscale/1280x720/window_at_bottom.png" id="60_ked68"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉visual_novel/👤programmer/📂message_windows/message_windows_monkey.gd" id="61_cfuy1"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉visual_novel/👤programmer/📂message_windows/its_concrete.gd" id="61_tvkup"]
 [ext_resource type="PackedScene" uid="uid://kqejd4uyxvtm" path="res://🎄addon_🍉key_config/👤programmer.tscn" id="62_isghc"]
@@ -91,7 +91,7 @@ visible = false
 [node name="🗻戦闘シーン" type="Sprite2D" parent="👤Illustrator"]
 z_index = 900
 position = Vector2(640, 360)
-texture = ExtResource("31_3w7mi")
+texture = ExtResource("6_7vyrp")
 
 [node name="ーーーーモンスター顔（Ｚ＝９１０）ーーーー" type="Node" parent="👤Illustrator"]
 
@@ -137,13 +137,13 @@ visible = false
 modulate = Color(1, 1, 1, 0.996078)
 z_index = 1000
 position = Vector2(640, 360)
-texture = ExtResource("60_ked68")
+texture = ExtResource("12_5jolw")
 
 [node name="■下" type="Sprite2D" parent="👤Illustrator"]
 visible = false
 z_index = 1
 position = Vector2(640, 360)
-texture = ExtResource("60_ked68")
+texture = ExtResource("12_5jolw")
 
 [node name="ーーーートランジション（Ｚ＝４０００）ーーーー" type="Node" parent="👤Illustrator"]
 
@@ -153,67 +153,67 @@ texture = ExtResource("60_ked68")
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("32_l43dy")
+texture = ExtResource("13_ict4m")
 
 [node name="🗻２コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("33_63jpw")
+texture = ExtResource("14_u4sc4")
 
 [node name="🗻３コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("34_x34j5")
+texture = ExtResource("15_dtifu")
 
 [node name="🗻４コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("35_jcaiw")
+texture = ExtResource("16_jt578")
 
 [node name="🗻５コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("36_1keft")
+texture = ExtResource("17_1hga5")
 
 [node name="🗻６コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("37_tdxrv")
+texture = ExtResource("18_wfba6")
 
 [node name="🗻７コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("38_vlm38")
+texture = ExtResource("19_nxo8s")
 
 [node name="🗻８コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("39_nr2kt")
+texture = ExtResource("20_540wy")
 
 [node name="🗻９コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("40_25lxp")
+texture = ExtResource("21_n1du6")
 
 [node name="🗻１０コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("41_j4orm")
+texture = ExtResource("22_a7r6s")
 
 [node name="🗻１１コマ" type="Sprite2D" parent="👤Illustrator/📂🗻戦闘開始トランジション"]
 visible = false
 z_index = 4000
 position = Vector2(640, 360)
-texture = ExtResource("42_qrihd")
+texture = ExtResource("23_jm2ol")
 
 [node name="ーーーーアドオンーーーー" type="Node" parent="👤Illustrator"]
 
