@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://7d1c4sgwele3"]
+[gd_scene load_steps=15 format=3 uid="uid://7d1c4sgwele3"]
 
 [ext_resource type="LabelSettings" uid="uid://bxfp11qlgp84q" path="res://🍋label_settings/🪑grayscale/x_large.tres" id="1_cmj1v"]
 [ext_resource type="LabelSettings" uid="uid://bngcpl7weake8" path="res://🍋label_settings/🪑grayscale/medium_thick.tres" id="2_ilxpb"]
-[ext_resource type="LabelSettings" uid="uid://dxnccgjo7wqga" path="res://🍋label_settings/🪑grayscale/medium_thin.tres" id="3_33htm"]
 [ext_resource type="FontFile" uid="uid://dvl62tovxmupk" path="res://🍋fonts/🪑mplus/Mplus2-Regular.otf" id="4_y64j6"]
 [ext_resource type="FontFile" uid="uid://bt4nkr8e52kvc" path="res://🍋fonts/🪑mplus/Mplus2-Bold.otf" id="5_jkaiw"]
 [ext_resource type="LabelSettings" uid="uid://m8dj47wqvbg7" path="res://🍋label_settings/🪑grayscale/medium.tres" id="6_igvtw"]
@@ -67,59 +66,6 @@ shadow_size = 4
 shadow_color = Color(0.12549, 0.12549, 0.12549, 1)
 
 [node name="📂🍉VisualNovel" type="Node"]
-
-[node name="Ｔタイトル" type="CanvasLayer" parent="."]
-
-[node name="きふわらべＲＰＧ" type="Label" parent="Ｔタイトル"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -512.0
-offset_top = -232.0
-offset_right = 512.0
-offset_bottom = -43.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "きふわらべＲＰＧ"
-label_settings = ExtResource("1_cmj1v")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="サブタイトル" type="Label" parent="Ｔタイトル"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -568.0
-offset_top = -110.0
-offset_right = 584.0
-offset_bottom = 79.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "～ Computer shogi story of the race of the bottom ～"
-label_settings = ExtResource("2_ilxpb")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Copyright" type="Label" parent="Ｔタイトル"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -639.0
-offset_top = 305.0
-offset_right = 637.0
-offset_bottom = 356.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "(C) 2023 同人サークルぐれーすけーる／むずでょ　音楽：(C) 魔王魂, 桜丸"
-label_settings = ExtResource("3_33htm")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Ｔエンディング" type="CanvasLayer" parent="."]
 visible = false

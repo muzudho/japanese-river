@@ -35,15 +35,15 @@
 [ext_resource type="AudioStream" uid="uid://cgfwug3u405gx" path="res://🍋audio_bg_musics/🪑maou_audio/maou_bgm_orchestra12.ogg" id="44_beusv"]
 [ext_resource type="AudioStream" uid="uid://c78m16nbbb3c" path="res://🍋audio_bg_musics/🪑maou_audio/maou_game_event17.ogg" id="45_dlghs"]
 [ext_resource type="PackedScene" uid="uid://blh00f8ui284" path="res://🎄addon_🍉battle/👤scenario_writer.tscn" id="45_xowih"]
-[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/visual_novel_choices_mappings.gd" id="47_byi5j"]
-[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/visual_novel_chapter_1.gd" id="48_ks5c6"]
+[ext_resource type="PackedScene" uid="uid://cf1klwep50atv" path="res://🎄addon_🍉japanese_river/👤scenario_writer_📂scenario.tscn" id="47_lllv5"]
 [ext_resource type="AudioStream" uid="uid://rqttefw8debu" path="res://🍋audio_sound_fx/🪑maou_audio/maou_se_magic_fire11.ogg" id="48_nxrfb"]
-[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_choices_mappings.gd" id="49_b8ix1"]
-[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_chapter_1.gd" id="50_sn313"]
 [ext_resource type="PackedScene" uid="uid://7d1c4sgwele3" path="res://🎄addon_🍉visual_novel/👤telop_coordinator.tscn" id="58_gje64"]
+[ext_resource type="LabelSettings" uid="uid://bxfp11qlgp84q" path="res://🍋label_settings/🪑grayscale/x_large.tres" id="59_q3sku"]
+[ext_resource type="LabelSettings" uid="uid://bngcpl7weake8" path="res://🍋label_settings/🪑grayscale/medium_thick.tres" id="60_0hcpi"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉kifuwarabe_rpg/scenario_writer/switch_department.gd" id="60_f7oqn"]
 [ext_resource type="Texture2D" uid="uid://h40kir6k3rxw" path="res://🍋images/🪑grayscale/1280x720/window_at_bottom.png" id="60_ked68"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉visual_novel/👤programmer/📂message_windows/message_windows_monkey.gd" id="61_cfuy1"]
+[ext_resource type="LabelSettings" uid="uid://dxnccgjo7wqga" path="res://🍋label_settings/🪑grayscale/medium_thin.tres" id="61_lwmvp"]
 [ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉visual_novel/👤programmer/📂message_windows/its_concrete.gd" id="61_tvkup"]
 [ext_resource type="PackedScene" uid="uid://kqejd4uyxvtm" path="res://🎄addon_🍉key_config/👤programmer.tscn" id="62_isghc"]
 [ext_resource type="Texture2D" uid="uid://cw3tbgchm8gja" path="res://🍋images/🪑grayscale/monster_faces/202310__godot__17-2213-hamu.png" id="68_8k378"]
@@ -312,23 +312,7 @@ script = ExtResource("60_f7oqn")
 
 [node name="📂🍉Battle" parent="👤ScenarioWriter" instance=ExtResource("45_xowih")]
 
-[node name="📂🍉JapaneseRiver" type="Node" parent="👤ScenarioWriter"]
-
-[node name="📗会話部門_🍉JapaneseRiver" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver"]
-
-[node name="📃選択肢と飛び先" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉JapaneseRiver"]
-script = ExtResource("47_byi5j")
-
-[node name="📃はじまり" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話部門_🍉JapaneseRiver"]
-script = ExtResource("48_ks5c6")
-
-[node name="📗会話システムメニュー部門_🍉JapaneseRiver" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver"]
-
-[node name="📃選択肢と飛び先" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話システムメニュー部門_🍉JapaneseRiver"]
-script = ExtResource("49_b8ix1")
-
-[node name="📃はじまり" type="Node" parent="👤ScenarioWriter/📂🍉JapaneseRiver/📗会話システムメニュー部門_🍉JapaneseRiver"]
-script = ExtResource("50_sn313")
+[node name="📂🍉JapaneseRiver" parent="👤ScenarioWriter" instance=ExtResource("47_lllv5")]
 
 [node name="👤TelopCoordinator" type="CanvasLayer" parent="."]
 visible = false
@@ -521,6 +505,61 @@ script = ExtResource("70_epi57")
 [node name="📂🍉KeyConfig" parent="👤TelopCoordinator" instance=ExtResource("81_acbnt")]
 
 [node name="📂🍉VisualNovel" parent="👤TelopCoordinator" instance=ExtResource("58_gje64")]
+
+[node name="📂🍉JapaneseRiver" type="Node" parent="👤TelopCoordinator"]
+
+[node name="Ｔタイトル" type="CanvasLayer" parent="👤TelopCoordinator/📂🍉JapaneseRiver"]
+
+[node name="日本の川" type="Label" parent="👤TelopCoordinator/📂🍉JapaneseRiver/Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -232.0
+offset_right = 512.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "日本の川"
+label_settings = ExtResource("59_q3sku")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="サブタイトル" type="Label" parent="👤TelopCoordinator/📂🍉JapaneseRiver/Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -110.0
+offset_right = 584.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "～ Japanese river ～"
+label_settings = ExtResource("60_0hcpi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Copyright" type="Label" parent="👤TelopCoordinator/📂🍉JapaneseRiver/Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -639.0
+offset_top = 305.0
+offset_right = 637.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "(C) 2023 同人サークルぐれーすけーる／むずでょ　音楽：(C) 魔王魂, 桜丸"
+label_settings = ExtResource("61_lwmvp")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="👤Scorer" type="Node" parent="."]
 script = ExtResource("72_v7dgx")

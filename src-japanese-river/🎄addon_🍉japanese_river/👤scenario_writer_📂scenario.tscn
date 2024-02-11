@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf1klwep50atv"]
+
+[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/visual_novel_choices_mappings.gd" id="1_y5ol8"]
+[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/visual_novel_chapter_1.gd" id="2_kbigu"]
+[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_choices_mappings.gd" id="3_rk3lx"]
+[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉japanese_river/👤scenario_writer/system_menu_chapter_1.gd" id="4_8f33i"]
+
+[node name="📂🍉JapaneseRiver" type="Node"]
+
+[node name="📗会話部門_🍉JapaneseRiver" type="Node" parent="."]
+
+[node name="📃選択肢と飛び先" type="Node" parent="📗会話部門_🍉JapaneseRiver"]
+script = ExtResource("1_y5ol8")
+
+[node name="📃はじまり" type="Node" parent="📗会話部門_🍉JapaneseRiver"]
+script = ExtResource("2_kbigu")
+
+[node name="📗会話システムメニュー部門_🍉JapaneseRiver" type="Node" parent="."]
+
+[node name="📃選択肢と飛び先" type="Node" parent="📗会話システムメニュー部門_🍉JapaneseRiver"]
+script = ExtResource("3_rk3lx")
+
+[node name="📃はじまり" type="Node" parent="📗会話システムメニュー部門_🍉JapaneseRiver"]
+script = ExtResource("4_8f33i")
