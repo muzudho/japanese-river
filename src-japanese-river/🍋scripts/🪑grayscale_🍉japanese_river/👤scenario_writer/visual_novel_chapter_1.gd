@@ -89,14 +89,17 @@ var scenario_document = {
 		""",
 		"""\
 		!
+		# 何も選択していないと後でエラーになるので、ダミーを入れておく
+		var:	selected_image,		🗻01北海道
 		goto:	¶北海道
 		""",
 	],
 	"¶北海道":[
 		"""\
 		!
-		img:	🗻01北海道
-		var:	selected_image,		🗻01北海道
+		img:	{{selected_image}},		hide
+		var:	selected_image,			🗻01北海道
+		img:	{{selected_image}}
 		choice:	1, 2
 		""",
 		"""\
@@ -108,7 +111,8 @@ var scenario_document = {
 		"""\
 		!
 		img:	{{selected_image}},		hide
-		img:	🗻02青森県
+		var:	selected_image,			🗻02青森県
+		img:	{{selected_image}}
 		choice:	1, 2, 3, 4
 		""",
 		"""\
