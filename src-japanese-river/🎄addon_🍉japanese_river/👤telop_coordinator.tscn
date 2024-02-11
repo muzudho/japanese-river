@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6hdyq1apqr5p"]
+
+[ext_resource type="LabelSettings" uid="uid://bxfp11qlgp84q" path="res://🍋label_settings/🪑grayscale/x_large.tres" id="1_0gmhf"]
+[ext_resource type="LabelSettings" uid="uid://bngcpl7weake8" path="res://🍋label_settings/🪑grayscale/medium_thick.tres" id="2_5mytt"]
+[ext_resource type="LabelSettings" uid="uid://dxnccgjo7wqga" path="res://🍋label_settings/🪑grayscale/medium_thin.tres" id="3_wvkcw"]
+
+[node name="📂🍉JapaneseRiver" type="Node"]
+
+[node name="Ｔタイトル" type="CanvasLayer" parent="."]
+
+[node name="日本の川" type="Label" parent="Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -232.0
+offset_right = 512.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "日本の川"
+label_settings = ExtResource("1_0gmhf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="サブタイトル" type="Label" parent="Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -110.0
+offset_right = 584.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "～ Japanese river ～"
+label_settings = ExtResource("2_5mytt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Copyright" type="Label" parent="Ｔタイトル"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -639.0
+offset_top = 305.0
+offset_right = 637.0
+offset_bottom = 356.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "(C) 2024 同人サークルぐれーすけーる／むずでょ　音楽：(C) 魔王魂, 桜丸"
+label_settings = ExtResource("3_wvkcw")
+horizontal_alignment = 1
+vertical_alignment = 1
