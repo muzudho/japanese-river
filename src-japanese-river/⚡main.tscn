@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://c7druiymjvw6i"]
+[gd_scene load_steps=65 format=3 uid="uid://c7druiymjvw6i"]
 
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/staff.gd" id="1_p2hw1"]
 [ext_resource type="Texture2D" uid="uid://bkfsr571tdwqf" path="res://🍋images/🪑grayscale/1280x720/grid.png" id="2_ivwoj"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer.gd" id="35_0eg4q"]
 [ext_resource type="PackedScene" uid="uid://tpups3rpk2j8" path="res://🎄addon_🍉visual_novel/👤musician_🌏bg_musics.tscn" id="35_65fhg"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_monkey.gd" id="36_8x268"]
+[ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_input.gd" id="37_cbu4d"]
 [ext_resource type="PackedScene" uid="uid://ddu67m5n2ad5u" path="res://🎄addon_🍉key_config/👤musician_🌏sound_fx.tscn" id="37_nknd3"]
 [ext_resource type="PackedScene" uid="uid://c0trqytdpqte8" path="res://🎄addon_🍉visual_novel/👤programmer_📂department_controller.tscn" id="38_2gg01"]
 [ext_resource type="PackedScene" uid="uid://bkfvsu8du416f" path="res://🎄addon_🍉visual_novel/👤musician_🌏sound_fx.tscn" id="38_kb7xl"]
@@ -267,6 +268,9 @@ script = ExtResource("35_0eg4q")
 
 [node name="🐵Monkey" type="Node" parent="👤Programmer"]
 script = ExtResource("36_8x268")
+
+[node name="🕹️Input" type="Node" parent="👤Programmer"]
+script = ExtResource("37_cbu4d")
 
 [node name="📂DepartmentController_🍉VisualNovel" parent="👤Programmer" instance=ExtResource("38_2gg01")]
 

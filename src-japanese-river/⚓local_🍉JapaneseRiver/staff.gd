@@ -6,7 +6,6 @@ extends Node2D
 # ノード・パス関連
 # ーーーーーーーー
 
-
 # ディレクター・ハブ取得
 func monkey():
 	return $"🐵Monkey"
@@ -15,7 +14,6 @@ func monkey():
 # ーーーーーーーー
 # 初期化
 # ーーーーーーーー
-
 
 # サブツリーが全てインスタンス化されたときに呼び出される
 # Called when the node enters the scene tree for the first time.
