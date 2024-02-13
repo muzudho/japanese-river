@@ -9,8 +9,8 @@ var Department = load("res://🍋scripts/🪑grayscale_🍉visual_novel/departme
 # メモリ関連
 # ーーーーーーーー
 
-# 状態。 WaitForKeyConfig, KeyConfig, Ready, Main の４つ
-var current_state = &"WaitForKeyConfig"
+# 状態。 NotReadyYet, InKeyConfig, Ready, InScenario の４つ
+var current_state = &"NotReadyYet"
 # 現在の部門（StringName型）
 var current_department_name = null
 # 現在鳴っている背景音楽のノード名
@@ -176,8 +176,8 @@ func _process(delta):
 
 	# キー・コンフィグは　フレームワークに収まらないので、ハードコーディングします
 	#
-	# キー・コンフィグが始まる
-	if self.current_state == &"WaitForKeyConfig":
+	# ［まだ準備ができていません］なら、キー・コンフィグへ進む
+	if self.current_state == &"NotReadyYet":
 		self.monkey().key_config_node().entry()
 		self.current_state = &"InKeyConfig"
 
