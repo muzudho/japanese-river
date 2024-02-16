@@ -62,3 +62,6 @@ func _unhandled_input(event):
 
 		var button_virtual_key = self.monkey().key_config_node().get_virtual_key_name_by_button_number(button_number)
 		print("［入力　シナリオ再生中の入力で］　button_virtual_key:" + str(button_virtual_key))
+
+		# get_merged_choices_mappings()
+		
