@@ -54,5 +54,8 @@ func _unhandled_input(event):
 
 	# ［シナリオ再生中の入力で］状態
 	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
-		print("［入力　シナリオ再生中の入力で］　event:" + str(event))
-		pass
+		print("［入力　シナリオ再生中の入力で］　event:" + event.as_text())
+		var button_number = self.monkey().key_config().parser_for_input().get_button_number_by_text(event.as_text())
+		print("［入力　シナリオ再生中の入力で］　button_number:" + str(button_number))
+		var lever_value = self.monkey().key_config().parser_for_input().get_lever_value_by_text(event.as_text())
+		print("［入力　シナリオ再生中の入力で］　lever_value:" + str(lever_value))
