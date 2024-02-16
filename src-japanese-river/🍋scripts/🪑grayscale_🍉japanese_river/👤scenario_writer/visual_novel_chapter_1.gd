@@ -93,6 +93,10 @@ var scenario_document = {
 		# 関数のテスト
 		func():
 			# ここで入力を待つにはどうする？
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput"
+			# InScenarioPlayingInput
 			pass,
 		"""\
 		!

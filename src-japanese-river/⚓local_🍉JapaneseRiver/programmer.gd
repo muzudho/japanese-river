@@ -9,7 +9,7 @@ var Department = load("res://🍋scripts/🪑grayscale_🍉visual_novel/departme
 # メモリ関連
 # ーーーーーーーー
 
-# 状態。 NotReadyYet, InKeyConfig, FirstTimeInScenario, InScenario の４つ
+# 状態。 NotReadyYet, InKeyConfig, FirstTimeInScenario, InScenario, InScenarioPlayingInput の５つ
 var current_state = &"NotReadyYet"
 # 現在の部門（StringName型）
 var current_department_name = null

@@ -32,6 +32,11 @@ func _unhandled_key_input(event):
 	elif self.monkey().owner_node().current_state == &"InScenario":
 		self.monkey().scenario_player().input_node().on_unhandled_key_input(event)
 
+	# ［シナリオ再生中の入力で］状態
+	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
+		print("［キー入力　シナリオ再生中の入力で］　event:" + str(event))
+		pass
+
 
 # テキストボックスなどにフォーカスが無いときの入力をとにかく拾う
 func _unhandled_input(event):
@@ -46,3 +51,8 @@ func _unhandled_input(event):
 	# ［シナリオで］状態
 	elif self.monkey().owner_node().current_state == &"InScenario":
 		self.monkey().scenario_player().input_node().on_unhandled_input(event)
+
+	# ［シナリオ再生中の入力で］状態
+	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
+		print("［入力　シナリオ再生中の入力で］　event:" + str(event))
+		pass
