@@ -22,6 +22,9 @@ script = ExtResource("2_0f1bx")
 [node name="🕹️Input" type="Node" parent="."]
 script = ExtResource("3_ti620")
 
+[node name="🅿Parser" type="Node" parent="🕹️Input"]
+script = ExtResource("6_i74c1")
+
 [node name="⌚Clock" type="Node" parent="."]
 script = ExtResource("2_bk854")
 
@@ -30,9 +33,6 @@ script = ExtResource("3_enr71")
 
 [node name="🍇StatemachineBehaviour" type="Node" parent="."]
 script = ExtResource("7_iph6o")
-
-[node name="🅿ParserForInput" type="Node" parent="."]
-script = ExtResource("6_i74c1")
 
 [node name="🖥️Display" type="Node" parent="."]
 script = ExtResource("3_e0fkj")
