@@ -63,5 +63,13 @@ func _unhandled_input(event):
 		var button_virtual_key = self.monkey().key_config_node().get_virtual_key_name_by_button_number(button_number)
 		print("［入力　シナリオ再生中の入力で］　button_virtual_key:" + str(button_virtual_key))
 
-		# get_merged_choices_mappings()
+		var department_value = self.monkey().scenario_player_node().get_current_department_value()
+		var department_name = str(department_value.name)
+		var paragraph_name = department_value.paragraph_name
+
+		# 辞書
+		var choices_mappings_a = self.monkey().scenario_player_node().get_merged_choices_mappings(department_name)
 		
+		# 段落配列。実質的には選択肢の配列
+		var paragraph_obj = choices_mappings_a[paragraph_name]
+		print("［入力　シナリオ再生中の入力で］　段落：" + str(paragraph_obj))
