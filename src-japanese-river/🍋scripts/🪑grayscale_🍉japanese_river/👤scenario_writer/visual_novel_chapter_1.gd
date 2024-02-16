@@ -90,14 +90,6 @@ var scenario_document = {
 		func():
 			# これはそのまま通り抜ける
 			pass,
-		# 関数のテスト
-		func():
-			# ここで入力を待つにはどうする？
-			# ［シナリオ再生中の入力で］状態へ移行
-			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
-			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput"
-			# InScenarioPlayingInput
-			pass,
 		"""\
 		!
 		# 何も選択していないと後でエラーになるので、ダミーを入れておく
@@ -111,6 +103,17 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻01北海道
 		img:	{{selected_image}}
+		""",
+		# 関数のテスト
+		func():
+			# ここで入力を待つにはどうする？
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput"
+			# TODO 決定ボタンを押したら "¶確定" へ移動したい
+			# TODO 下キーを押したら "¶青森" へ移動したい
+			pass,
+		"""\
 		choice:	1, 2
 		""",
 		"""\
