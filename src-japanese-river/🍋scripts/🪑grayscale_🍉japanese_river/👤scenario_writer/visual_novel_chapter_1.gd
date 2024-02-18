@@ -114,6 +114,7 @@ var scenario_document = {
 			# TODO 下キーを押したら "¶青森" へ移動したい
 			pass,
 		"""\
+		!
 		choice:	1, 2
 		""",
 		"""\

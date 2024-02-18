@@ -73,3 +73,38 @@ func _unhandled_input(event):
 		# 段落配列。実質的には選択肢の配列
 		var paragraph_obj = choices_mappings_a[paragraph_name]
 		print("［入力　シナリオ再生中の入力で］　段落：" + str(paragraph_obj))
+
+		# paragraph_obj の例
+		#{
+		#	# TODO ボタンの押下状態や、レバーの整数値によって、飛び先を制御したい
+		#	# TODO 以下は例。レバーは + - も指定
+		#	&"VK_Ok" : "¶確定",
+		#	&"VK_Down" : {
+		#		&"+" : "¶青森県",
+		#	},
+		#},
+
+		if button_virtual_key in paragraph_obj:
+			print("［入力　シナリオ再生中の入力で］　入力：" + str(button_virtual_key) + " は、選択肢：" + str(paragraph_obj) + "の中に見つかりました")
+			
+			var target = paragraph_obj[button_virtual_key]
+
+			if button_virtual_key == "VK_Right" or button_virtual_key == "VK_Down":
+				
+				# TODO レバーを倒せば、レバーをニュートラルに戻す操作も続いて出てくるが、そこまで細かく対応していない。対応する必要があったら改造する
+				if 0 < lever_value and &"+" in target:
+					target = target[&"+"]
+					
+				elif lever_value < 0 and &"-" in target:
+					target = target[&"-"]
+										
+				else:
+					# レバーをニュートラルに戻したとき
+					target = &""
+			
+			if target != &"":
+				print("［入力　シナリオ再生中の入力で］　飛び先：［" + str(target) + "］へ飛びたい")
+			
+		else:
+			print("［入力　シナリオ再生中の入力で］　入力：" + str(button_virtual_key) + " は、選択肢：" + str(paragraph_obj) + "の中に見つかりませんでした")
+			
