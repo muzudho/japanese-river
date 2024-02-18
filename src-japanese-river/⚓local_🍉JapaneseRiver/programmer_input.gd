@@ -56,21 +56,24 @@ func _unhandled_input(event):
 	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
 		print("［入力　シナリオ再生中の入力で］　event:" + event.as_text())
 		var button_number = self.monkey().key_config().input_parser_node().get_button_number_by_text(event.as_text())
-		print("［入力　シナリオ再生中の入力で］　button_number:" + str(button_number))
+		#print("［入力　シナリオ再生中の入力で］　button_number:" + str(button_number))
 		var lever_value = self.monkey().key_config().input_parser_node().get_lever_value_by_text(event.as_text())
-		print("［入力　シナリオ再生中の入力で］　lever_value:" + str(lever_value))
+		#print("［入力　シナリオ再生中の入力で］　lever_value:" + str(lever_value))
 
 		var button_virtual_key = self.monkey().key_config_node().get_virtual_key_name_by_button_number(button_number)
-		print("［入力　シナリオ再生中の入力で］　button_virtual_key:" + str(button_virtual_key))
+		#print("［入力　シナリオ再生中の入力で］　button_virtual_key:" + str(button_virtual_key))
 
 		var department_value = self.monkey().scenario_player_node().get_current_department_value()
-		var department_name = str(department_value.name)
+		var department_name_str = str(department_value.name)
+		#print("［入力　シナリオ再生中の入力で］　部門名：" + department_name_str)
 		var paragraph_name = department_value.paragraph_name
+		#print("［入力　シナリオ再生中の入力で］　段落名：" + str(paragraph_name))
 
 		# 辞書
-		var choices_mappings_a = self.monkey().scenario_player_node().get_merged_choices_mappings(department_name)
+		var choices_mappings_a = self.monkey().scenario_player_node().get_merged_choices_mappings(department_name_str)
 		
 		# 段落配列。実質的には選択肢の配列
+		#print("［入力　シナリオ再生中の入力で］　辞書：" + str(choices_mappings_a))
 		var paragraph_obj = choices_mappings_a[paragraph_name]
 		print("［入力　シナリオ再生中の入力で］　段落：" + str(paragraph_obj))
 
@@ -104,6 +107,9 @@ func _unhandled_input(event):
 			
 			if target != &"":
 				print("［入力　シナリオ再生中の入力で］　飛び先：［" + str(target) + "］へ飛びたい")
+				self.monkey().of_staff().programmer().get_instruction_node(&"📗Goto").goto(target)
+				# ［シナリオで］状態に戻す
+				self.monkey().owner_node().current_state = &"InScenario"
 			
 		else:
 			print("［入力　シナリオ再生中の入力で］　入力：" + str(button_virtual_key) + " は、選択肢：" + str(paragraph_obj) + "の中に見つかりませんでした")

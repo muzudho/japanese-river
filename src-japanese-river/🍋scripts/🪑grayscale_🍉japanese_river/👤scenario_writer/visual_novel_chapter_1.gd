@@ -112,15 +112,16 @@ var scenario_document = {
 			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput"
 			# TODO 決定ボタンを押したら "¶確定" へ移動したい
 			# TODO 下キーを押したら "¶青森" へ移動したい
+			# TODO ここでシナリオのパースを止めたい
 			pass,
-		"""\
-		!
-		choice:	1, 2
-		""",
-		"""\
-		　確定
-		　青森県
-		""",
+		#"""\
+		#!
+		#choice:	1, 2
+		#""",
+		#"""\
+		#　確定
+		#　青森県
+		#""",
 	],
 	"¶青森県":[
 		"""\
