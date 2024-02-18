@@ -104,24 +104,10 @@ var scenario_document = {
 		var:	  selected_image,		🗻01北海道
 		img:	{{selected_image}}
 		""",
-		# 関数のテスト
 		func():
-			# ここで入力を待つにはどうする？
 			# ［シナリオ再生中の入力で］状態へ移行
 			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
-			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput"
-			# TODO 決定ボタンを押したら "¶確定" へ移動したい
-			# TODO 下キーを押したら "¶青森" へ移動したい
-			# TODO ここでシナリオのパースを止めたい
-			pass,
-		#"""\
-		#!
-		#choice:	1, 2
-		#""",
-		#"""\
-		#　確定
-		#　青森県
-		#""",
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶青森県":[
 		"""\
@@ -129,14 +115,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻02青森県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　北海道
-		　秋田県
-		　岩手県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶秋田県":[
 		"""\
@@ -144,15 +127,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻05秋田県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　青森県
-		　岩手県
-		　宮城県
-		　山形県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶岩手県":[
 		"""\
@@ -160,14 +139,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻03岩手県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　青森県
-		　宮城県
-		　秋田県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶山形県":[
 		"""\
@@ -175,15 +151,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻06山形県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　秋田県
-		　宮城県
-		　福島県
-		　新潟県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶宮城県":[
 		"""\
@@ -191,15 +163,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻04宮城県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　岩手県
-		　福島県
-		　山形県
-		　秋田県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶福島県":[
 		"""\
@@ -207,17 +175,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻07福島県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
-		"""\
-		　確定
-		　山形県
-		　宮城県
-		　茨城県
-		　栃木県
-		　群馬県
-		　新潟県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶群馬県":[
 		"""\
@@ -225,16 +187,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻10群馬県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6
 		""",
-		"""\
-		　確定
-		　新潟県
-		　福島県
-		　栃木県
-		　埼玉県
-		　長野県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶栃木県":[
 		"""\
@@ -242,15 +199,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻09栃木県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　福島県
-		　茨城県
-		　埼玉県
-		　群馬県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶茨城県":[
 		"""\
@@ -258,15 +211,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻08茨城県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　福島県
-		　千葉県
-		　埼玉県
-		　栃木県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶千葉県":[
 		"""\
@@ -274,15 +223,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻12千葉県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　茨城県
-		　神奈川県
-		　東京都
-		　埼玉県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶埼玉県":[
 		"""\
@@ -290,18 +235,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻11埼玉県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7, 8
 		""",
-		"""\
-		　確定
-		　群馬県
-		　栃木県
-		　茨城県
-		　千葉県
-		　東京都
-		　山梨県
-		　長野県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶東京都":[
 		"""\
@@ -309,15 +247,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻13東京都
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　埼玉県
-		　千葉県
-		　神奈川県
-		　山梨県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶神奈川県":[
 		"""\
@@ -325,14 +259,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻14神奈川県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　東京都
-		　静岡県
-		　山梨県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶新潟県":[
 		"""\
@@ -340,16 +271,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻15新潟県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6
 		""",
-		"""\
-		　確定
-		　山形県
-		　福島県
-		　群馬県
-		　長野県
-		　富山県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶長野県":[
 		"""\
@@ -357,19 +283,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻20長野県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7, 8, 9
 		""",
-		"""\
-		　確定
-		　新潟県
-		　群馬県
-		　埼玉県
-		　山梨県
-		　静岡県
-		　愛知県
-		　岐阜県
-		　富山県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶富山県":[
 		"""\
@@ -377,15 +295,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻16富山県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　新潟県
-		　長野県
-		　岐阜県
-		　石川県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶石川県":[
 		"""\
@@ -393,14 +307,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻17石川県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　富山県
-		　岐阜県
-		　福井県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶福井県":[
 		"""\
@@ -408,15 +319,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻18福井県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　石川県
-		　岐阜県
-		　滋賀県
-		　京都府
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶岐阜県":[
 		"""\
@@ -424,18 +331,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻21岐阜県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7, 8
 		""",
-		"""\
-		　確定
-		　富山県
-		　長野県
-		　愛知県
-		　三重県
-		　滋賀県
-		　福井県
-		　石川県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶山梨県":[
 		"""\
@@ -443,16 +343,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻19山梨県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6
 		""",
-		"""\
-		　確定
-		　埼玉県
-		　東京都
-		　神奈川県
-		　静岡県
-		　長野県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶静岡県":[
 		"""\
@@ -460,15 +355,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻22静岡県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　山梨県
-		　神奈川県
-		　愛知県
-		　長野県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶愛知県":[
 		"""\
@@ -476,15 +367,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻23愛知県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　岐阜県
-		　長野県
-		　静岡県
-		　三重県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶滋賀県":[
 		"""\
@@ -492,15 +379,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻25滋賀県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　福井県
-		　岐阜県
-		　三重県
-		　京都府
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶京都府":[
 		"""\
@@ -508,17 +391,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻26京都府
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
-		"""\
-		　確定
-		　福井県
-		　滋賀県
-		　三重県
-		　奈良県
-		　大阪府
-		　兵庫県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶兵庫県":[
 		"""\
@@ -526,16 +403,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻28兵庫県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6
 		""",
-		"""\
-		　確定
-		　京都府
-		　大阪府
-		　徳島県
-		　岡山県
-		　鳥取県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶三重県":[
 		"""\
@@ -543,17 +415,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻24三重県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6, 7
 		""",
-		"""\
-		　確定
-		　滋賀県
-		　岐阜県
-		　愛知県
-		　和歌山県
-		　奈良県
-		　京都府
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶奈良県":[
 		"""\
@@ -561,15 +427,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻29奈良県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　京都府
-		　三重県
-		　和歌山県
-		　大阪府
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶和歌山県":[
 		"""\
@@ -577,14 +439,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻30和歌山県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　大阪府
-		　奈良県
-		　三重県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶大阪府":[
 		"""\
@@ -592,15 +451,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻27大阪府
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　京都府
-		　奈良県
-		　和歌山県
-		　兵庫県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶鳥取県":[
 		"""\
@@ -608,15 +463,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻31鳥取県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　兵庫県
-		　岡山県
-		　広島県
-		　島根県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶島根県":[
 		"""\
@@ -624,14 +475,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻32島根県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　鳥取県
-		　広島県
-		　山口県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶山口県":[
 		"""\
@@ -639,14 +487,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻35山口県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　島根県
-		　広島県
-		　福岡県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶岡山県":[
 		"""\
@@ -654,15 +499,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻33岡山県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　鳥取県
-		　兵庫県
-		　香川県
-		　広島県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶広島県":[
 		"""\
@@ -670,16 +511,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻34広島県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5, 6
 		""",
-		"""\
-		　確定
-		　島根県
-		　鳥取県
-		　岡山県
-		　愛媛県
-		　山口県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶香川県":[
 		"""\
@@ -687,14 +523,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻37香川県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　岡山県
-		　徳島県
-		　愛媛県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶徳島県":[
 		"""\
@@ -702,15 +535,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻36徳島県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　香川県
-		　兵庫県
-		　高知県
-		　愛媛県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶愛媛県":[
 		"""\
@@ -718,15 +547,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻38愛媛県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　広島県
-		　香川県
-		　徳島県
-		　高知県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶高知県":[
 		"""\
@@ -734,13 +559,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻39高知県
 		img:	{{selected_image}}
-		choice:	1, 2, 3
 		""",
-		"""\
-		　確定
-		　徳島県
-		　愛媛県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶福岡県":[
 		"""\
@@ -748,15 +571,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻40福岡県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　山口県
-		　大分県
-		　熊本県
-		　佐賀県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶佐賀県":[
 		"""\
@@ -764,13 +583,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻41佐賀県
 		img:	{{selected_image}}
-		choice:	1, 2, 3
 		""",
-		"""\
-		　確定
-		　福岡県
-		　長崎県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶長崎県":[
 		"""\
@@ -778,12 +595,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻42長崎県
 		img:	{{selected_image}}
-		choice:	1, 2
 		""",
-		"""\
-		　確定
-		　佐賀県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶大分県":[
 		"""\
@@ -791,14 +607,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻44大分県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　宮崎県
-		　熊本県
-		　福岡県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶熊本県":[
 		"""\
@@ -806,15 +619,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻43熊本県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4, 5
 		""",
-		"""\
-		　確定
-		　福岡県
-		　大分県
-		　宮城県
-		　鹿児島県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶宮崎県":[
 		"""\
@@ -822,14 +631,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻45宮崎県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　大分県
-		　鹿児島県
-		　熊本県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶鹿児島県":[
 		"""\
@@ -837,14 +643,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻46鹿児島県
 		img:	{{selected_image}}
-		choice:	1, 2, 3, 4
 		""",
-		"""\
-		　確定
-		　熊本県
-		　宮崎県
-		　沖縄県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶沖縄県":[
 		"""\
@@ -852,12 +655,11 @@ var scenario_document = {
 		img:	{{selected_image}},		hide
 		var:	  selected_image,		🗻47沖縄県
 		img:	{{selected_image}}
-		choice:	1, 2
 		""",
-		"""\
-		　確定
-		　鹿児島県
-		""",
+		func():
+			# ［シナリオ再生中の入力で］状態へ移行
+			print("［シナリオ　はじまり］　［シナリオ再生中の入力で］状態へ移行")
+			self.monkey().of_staff().programmer().owner_node().current_state = &"InScenarioPlayingInput",
 	],
 	"¶確定":[
 		"""\
