@@ -105,13 +105,22 @@ func parse_virtual_lever_input(paragraph_obj):
 		
 		# 下方向にレバーが倒れており、段落にも下方向の記載があるか？
 		elif 0 < down_lever_value && &"+" in target:
-			# ［下方向］へ移動（飛び先の段落名だ）
+			# ［下方向］へ移動
+			#
+			#　まだ、以下のどちらか確定していない
+			#	- 辞書
+			#	- 飛び先の段落名
 			target = target[&"+"]
-			print("［入力　シナリオ再生中の入力で　レバー］　下向きの入力［" + str(down_lever_value) + "］があり、段落にも下向きの記述がある。段落：" + str(target))
+		
+			if typeof(target) == TYPE_DICTIONARY:
+				print("［入力　シナリオ再生中の入力で　レバー］　下向きの入力［" + str(down_lever_value) + "］があり、段落にも下向きの記述がある。段落：" + str(target))
+
+			else:
+				print("［入力　シナリオ再生中の入力で　レバー］　下向きの入力［" + str(down_lever_value) + "］があった。飛び先：" + str(target))
 		
 		else:
-			# 段落に記述のない入力方向なので、何もしない
-			print("［入力　シナリオ再生中の入力で　レバー］　レバーの向きの記述がなかった。段落：" + str(target))
+			# 段落に記述のない入力方向なので、関数を抜けます
+			#print("［入力　シナリオ再生中の入力で　レバー］　レバーの向きの記述がなかった。段落：" + str(target))
 			return
 	
 	# ターゲットが名前型（段落名）ではないなら
@@ -124,13 +133,13 @@ func parse_virtual_lever_input(paragraph_obj):
 		if 0 == right_lever_value:
 			
 			# 段落は辞書型で、キーが空文字列のものを含むか？
-			if typeof(target) == TYPE_DICTIONARY && &"" in paragraph_obj:
+			if typeof(target) == TYPE_DICTIONARY && &"" in target:
 				# それを選ぶ（飛び先の段落名だ）
 				target = paragraph_obj[&""]
 				print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がある。段落：" + str(target))
 			
-			else:
-				print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がない。段落：" + str(target))
+			#else:
+			#	print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がないから無視します。段落：" + str(target))
 		
 		# 左右方向に入力があり、段落にも左右方向の記述があるか？
 		elif &"VK_Right" in target:
@@ -151,8 +160,8 @@ func parse_virtual_lever_input(paragraph_obj):
 				print("［入力　シナリオ再生中の入力で　レバー］　右向きの入力［" + str(right_lever_value) + "］があり、段落にも右向きの記述がある。段落：" + str(target))
 
 			else:
-				# 段落に記述のない入力方向なので、何もしない
-				print("［入力　シナリオ再生中の入力で　レバー］　レバーの向きの記述がなかった。段落：" + str(target))
+				# 段落に記述のない入力方向なので、関数を抜けます
+				print("［入力　シナリオ再生中の入力で　レバー］　レバーの向きの記述がなかった。関数を抜けます。段落：" + str(target))
 				return
 	
 	if typeof(target) == TYPE_STRING || typeof(target) == TYPE_STRING_NAME:
@@ -162,10 +171,10 @@ func parse_virtual_lever_input(paragraph_obj):
 		self.monkey().owner_node().current_state = &"InScenario"
 		
 	else:
-		if typeof(target) == TYPE_DICTIONARY:
-			print("［入力　シナリオ再生中の入力で］　レバー入力を検知できなかったので無視します。 辞書の中身:［" + str(target) + "］")
-		else:
-			print("［入力　シナリオ再生中の入力で］　レバー入力を検知できなかったので無視します。 typeof(target):［" + str(typeof(target)) + "］")
+		#if typeof(target) == TYPE_DICTIONARY:
+		#	print("［入力　シナリオ再生中の入力で］　レバー入力を検知できなかったので無視します。 辞書の中身:［" + str(target) + "］")
+		#else:
+		#	print("［入力　シナリオ再生中の入力で］　レバー入力を検知できなかったので無視します。 typeof(target):［" + str(typeof(target)) + "］")
 			
 		return
 
