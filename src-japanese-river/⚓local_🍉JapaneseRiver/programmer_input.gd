@@ -133,13 +133,18 @@ func parse_virtual_lever_input(paragraph_obj):
 		if 0 == right_lever_value:
 			
 			# 段落は辞書型で、キーが空文字列のものを含むか？
-			if typeof(target) == TYPE_DICTIONARY && &"" in target:
-				# それを選ぶ（飛び先の段落名だ）
-				target = paragraph_obj[&""]
-				print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がある。段落：" + str(target))
+			if typeof(target) == TYPE_DICTIONARY:
+				if &"" in target:
+					# それを選ぶ（飛び先の段落名だ）
+					target = target[&""]
+				elif "" in target:
+					# それを選ぶ（飛び先の段落名だ）
+					target = target[""]
+				
+				print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述があった。次の段落：" + str(target))
 			
-			#else:
-			#	print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がないから無視します。段落：" + str(target))
+			else:
+				print("［入力　シナリオ再生中の入力で　レバー］　左右方向に入力がなく、段落にも左右方向に入力がないときの記述がないから無視します。 right_lever_value:［" + str(right_lever_value) + "］　段落：" + str(target))
 		
 		# 左右方向に入力があり、段落にも左右方向の記述があるか？
 		elif &"VK_Right" in target:
