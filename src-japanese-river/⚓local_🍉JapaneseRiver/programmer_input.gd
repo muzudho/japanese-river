@@ -96,14 +96,20 @@ func parse_virtual_lever_input(paragraph_obj):
 		# その下の要素へ移動
 		target = target[&"VK_Down"]
 
-		# 上か？
-		if down_lever_value < 0:
+		# 上方向にレバーが倒れており、段落にも上方向の記載があるか？
+		if down_lever_value < 0 && &"-" in target:
 			# ［上方向］へ移動（飛び先の段落名だ）
 			target = target[&"-"]
 		
-		else:
+		# 下方向にレバーが倒れており、段落にも下方向の記載があるか？
+		elif 0 < down_lever_value && &"+" in target:
 			# ［下方向］へ移動（飛び先の段落名だ）
 			target = target[&"+"]
+		
+		else:
+			# 段落に記述のない入力方向なので、何もしない
+			#target = &""
+			return
 			
 
 	# 次に、左右を確認
@@ -122,14 +128,20 @@ func parse_virtual_lever_input(paragraph_obj):
 		# その下の要素へ移動
 		target = target[&"VK_Right"]
 
-		# 左か？
-		if right_lever_value < 0:
+		# 左方向にレバーが倒れており、段落にも左方向の記載があるか？
+		if right_lever_value < 0 && &"-" in target:
 			# ［左方向］へ移動（飛び先の段落名だ）
 			target = target[&"-"]
 		
-		else:
+		# 右方向にレバーが倒れており、段落にも右方向の記載があるか？
+		elif 0 < right_lever_value && &"+" in target:
 			# ［右方向］へ移動（飛び先の段落名だ）
 			target = target[&"+"]
+
+		else:
+			# 段落に記述のない入力方向なので、何もしない
+			#target = &""
+			return
 	
 	if typeof(target) == TYPE_STRING_NAME:
 		print("［入力　シナリオ再生中の入力で］　レバー入力。［" + str(target) + "］へ飛ぶ")
