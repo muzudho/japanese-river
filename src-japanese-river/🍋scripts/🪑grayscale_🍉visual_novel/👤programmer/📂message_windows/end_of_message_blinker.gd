@@ -157,7 +157,7 @@ func set_appear_subtree(appear_flag):
 # 初期化
 #	ウィンドウが消えている状態を想定しています。
 func on_none_the_end_of_message_blinker():
-	print("［文末ブリンカー　”MessageWindow_" + str(self.get_message_window_name()) + "/*/" + self.name + "］　オン・デサイデッド")
+	#print("［文末ブリンカー　”MessageWindow_" + str(self.get_message_window_name()) + "/*/" + self.name + "］　オン・デサイデッド")
 
 	# ブリンカーのスイッチ・オフ
 	self.statemachine_of_blinker.switch_off()

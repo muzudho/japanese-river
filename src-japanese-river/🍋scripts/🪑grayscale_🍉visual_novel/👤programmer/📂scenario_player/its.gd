@@ -97,11 +97,11 @@ func play_paragraph():
 
 	# 全部消化済みの場合
 	if self.sub_monkey().scenario_helper_node().get_current_paragraph_array_size() <= message_window_gui.paragraph_item_index:
-		print("［シナリオ再生エンジン］（" + department_value.name + "　" + department_value.paragraph_name + "）　段落を読み終わっている")
+		#print("［シナリオ再生エンジン］（" + department_value.name + "　" + department_value.paragraph_name + "）　段落を読み終わっている")
 
 		# かつ、コンプリート中の場合、ユーザー入力を待つ
 		if message_window_gui.statemachine_of_message_window.is_completed():
-			print("［シナリオ再生エンジン］（" + department_value.name + "　"+ department_value.paragraph_name + "）　全消化済みだが、コンプリート中だから、勝手に何もしない。ユーザー入力を待つ")
+			#print("［シナリオ再生エンジン］（" + department_value.name + "　"+ department_value.paragraph_name + "）　全消化済みだが、コンプリート中だから、勝手に何もしない。ユーザー入力を待つ")
 			# 自動で何かしない
 			return
 
@@ -111,7 +111,7 @@ func play_paragraph():
 		# Completed 時もパース始めたらよくない
 		if not message_window_gui.statemachine_of_message_window.is_completed():
 			# TODO 選択肢のときもややこしいが
-			print("［シナリオ再生エンジン］（" + department_value.name + "　"+ department_value.paragraph_name + "）　パースを開始してよい（本当か？）")
+			#print("［シナリオ再生エンジン］（" + department_value.name + "　"+ department_value.paragraph_name + "）　パースを開始してよい（本当か？）")
 			# パースを開始してよい
 			department_value.set_parse_lock(false)
 

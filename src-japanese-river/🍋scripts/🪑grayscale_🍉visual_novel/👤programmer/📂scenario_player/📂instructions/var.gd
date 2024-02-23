@@ -43,7 +43,7 @@ func monkey():
 func do_it(line):
 
 	var csv = line.substr(self.code.length()).strip_edges()
-	print("［命令　変数］　CSV：[" + csv + "]")
+	#print("［命令　変数］　CSV：[" + csv + "]")
 	# 文字列の配列に分割
 	var string_packed_array = csv.split(",", true, 0)
 
@@ -64,11 +64,11 @@ func do_it(line):
 
 # 変数の記憶
 func set_var(key, value):
-	print("［命令　変数］　（" + key + "）[" + value + "]")
+	#print("［命令　変数］　（" + key + "）[" + value + "]")
 	self.monkey().of_staff().programmer().owner_node().stage_directions_variables[key] = value
 
 
 # 変数のクリアー
 func clear_var():
-	print("［命令　変数］　クリアー")
+	#print("［命令　変数］　クリアー")
 	self.monkey().of_staff().programmer().owner_node().stage_directions_variables = {}

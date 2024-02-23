@@ -242,16 +242,16 @@ func expand_variables(target_before_change):
 
 				# 変数名取得
 				var key = target_before_change.substr(open_index + 2, close_index - (open_index + 2))
-				print("［プログラマーズ・ハブ　変数展開］　変数キー：［" + key + "］")
+				#print("［プログラマーズ・ハブ　変数展開］　変数キー：［" + key + "］")
 				
 				if key in self.monkey().of_staff().programmer().owner_node().stage_directions_variables:
 					var value = self.monkey().of_staff().programmer().owner_node().stage_directions_variables[key]
-					print("［プログラマーズ・ハブ　変数展開］　変数値：［" + value + "］")
+					#print("［プログラマーズ・ハブ　変数展開］　変数値：［" + value + "］")
 				
 					terget_after_change += value
 				
 				else:
-					print("［プログラマーズ・ハブ　変数展開］　変数値が見つかりません")
+					#print("［プログラマーズ・ハブ　変数展開］　変数値が見つかりません")
 					
 					# 仕方ないので、カッコ悪いが、キー（ハンドルバー）を画面に表示する
 					terget_after_change += "{{" + key + "}}"
