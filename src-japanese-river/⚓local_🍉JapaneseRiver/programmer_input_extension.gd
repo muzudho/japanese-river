@@ -39,3 +39,44 @@ func on_process(_delta):
 		self.owner_node().parse_virtual_button_input(&"VK_Cancel", paragraph_obj)
 		self.owner_node().parse_virtual_button_input(&"VK_FastForward", paragraph_obj)
 		self.owner_node().parse_virtual_lever_input(paragraph_obj)
+
+
+func on_handled_input(event):
+	# ［まだ準備ができていません］
+	if self.monkey().owner_node().current_state == &"NotReadyYet":
+		pass
+
+	# ［キー・コンフィグで］状態
+	elif self.monkey().owner_node().current_state == &"InKeyConfig":
+		self.monkey().key_config_node().on_unhandled_input(event)
+
+	# ［シナリオで］状態
+	elif self.monkey().owner_node().current_state == &"InScenario":
+		self.monkey().scenario_player().input_node().on_unhandled_input(event)
+
+	# ［シナリオ再生中の入力で］状態
+	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
+		pass
+
+
+# テキストボックスなどにフォーカスが無いときのキー入力を拾う
+#
+# 子要素から親要素の順で呼び出されるようだ。
+# このプログラムでは　ルート　だけで　キー入力を拾うことにする
+func _unhandled_key_input(event):
+	# ［まだ準備ができていません］
+	if self.monkey().owner_node().current_state == &"NotReadyYet":
+		pass
+
+	# ［キー・コンフィグで］は、何もするな
+	elif self.monkey().owner_node().current_state == &"InKeyConfig":
+		pass
+
+	# ［シナリオで］状態
+	elif self.monkey().owner_node().current_state == &"InScenario":
+		self.monkey().scenario_player().input_node().on_unhandled_key_input(event)
+
+	# ［シナリオ再生中の入力で］状態
+	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
+		print("［キー入力　シナリオ再生中の入力で］　event:" + str(event))
+		pass

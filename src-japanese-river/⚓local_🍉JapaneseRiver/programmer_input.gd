@@ -279,29 +279,6 @@ func parse_key_process(virtual_key_name):
 # 入力
 # ーーーーーーーー
 
-# テキストボックスなどにフォーカスが無いときのキー入力を拾う
-#
-# 子要素から親要素の順で呼び出されるようだ。
-# このプログラムでは　ルート　だけで　キー入力を拾うことにする
-func _unhandled_key_input(event):
-	# ［まだ準備ができていません］
-	if self.monkey().owner_node().current_state == &"NotReadyYet":
-		pass
-
-	# ［キー・コンフィグで］は、何もするな
-	elif self.monkey().owner_node().current_state == &"InKeyConfig":
-		pass
-
-	# ［シナリオで］状態
-	elif self.monkey().owner_node().current_state == &"InScenario":
-		self.monkey().scenario_player().input_node().on_unhandled_key_input(event)
-
-	# ［シナリオ再生中の入力で］状態
-	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
-		print("［キー入力　シナリオ再生中の入力で］　event:" + str(event))
-		pass
-
-
 # テキストボックスなどにフォーカスが無いときの入力をとにかく拾う
 #
 #	X軸と Y軸は別々に飛んでくるので　使いにくい。斜め入力を判定するには `_process` の方を使う
@@ -310,21 +287,9 @@ func _unhandled_input(event):
 	# キー入力を受け取り、その状態を記憶します
 	self.memory_key_state(event)
 
-	# ［まだ準備ができていません］
-	if self.monkey().owner_node().current_state == &"NotReadyYet":
-		pass
+	# 拡張
+	self.extension_node().on_handled_input(event)
 
-	# ［キー・コンフィグで］状態
-	elif self.monkey().owner_node().current_state == &"InKeyConfig":
-		self.monkey().key_config_node().on_unhandled_input(event)
-
-	# ［シナリオで］状態
-	elif self.monkey().owner_node().current_state == &"InScenario":
-		self.monkey().scenario_player().input_node().on_unhandled_input(event)
-
-	# ［シナリオ再生中の入力で］状態
-	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
-		pass
 
 # キー入力を受け取り、その状態を記憶します
 func memory_key_state(event):
