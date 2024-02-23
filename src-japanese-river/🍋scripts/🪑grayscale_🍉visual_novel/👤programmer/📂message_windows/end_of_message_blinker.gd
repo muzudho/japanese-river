@@ -311,7 +311,7 @@ func on_virtual_key_input(
 		vk_name,
 		vk_state,
 		vk_occurence,
-		vk_during):
+		_vk_during):
 
 	# 一時的にどこかに消えているのなら処理しない
 	if not self.is_appear:

@@ -77,7 +77,7 @@ func parse_virtual_key_on_process_if_it_change(vk_name):
 #
 # 子要素から親要素の順で呼び出されるようだ。
 # このプログラムでは　ルート　だけで　キー入力を拾うことにする
-func on_unhandled_key_input(event):
+func on_unhandled_key_input(_event):
 	# ［まだ準備ができていません］
 	if self.monkey().owner_node().current_state == &"NotReadyYet":
 		pass
