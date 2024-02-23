@@ -1,3 +1,4 @@
+# インプット　＞　エクステンション（Extension；拡張）
 extends Node
 
 

@@ -23,7 +23,7 @@
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer.gd" id="35_0eg4q"]
 [ext_resource type="PackedScene" uid="uid://tpups3rpk2j8" path="res://🎄addon_🍉visual_novel/👤musician_🌏bg_musics.tscn" id="35_65fhg"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_monkey.gd" id="36_8x268"]
-[ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_input.gd" id="37_cbu4d"]
+[ext_resource type="Script" path="res://🍋scripts/🪑grayscale_🍉key_config/👤programmer/🕹️input.gd" id="37_1myxt"]
 [ext_resource type="PackedScene" uid="uid://ddu67m5n2ad5u" path="res://🎄addon_🍉key_config/👤musician_🌏sound_fx.tscn" id="37_nknd3"]
 [ext_resource type="PackedScene" uid="uid://c0trqytdpqte8" path="res://🎄addon_🍉visual_novel/👤programmer_📂department_controller.tscn" id="38_2gg01"]
 [ext_resource type="Script" path="res://⚓local_🍉JapaneseRiver/programmer_input_extension.gd" id="38_38kud"]
@@ -271,7 +271,7 @@ script = ExtResource("35_0eg4q")
 script = ExtResource("36_8x268")
 
 [node name="🕹️Input" type="Node" parent="👤Programmer"]
-script = ExtResource("37_cbu4d")
+script = ExtResource("37_1myxt")
 
 [node name="Extension" type="Node" parent="👤Programmer/🕹️Input"]
 script = ExtResource("38_38kud")
