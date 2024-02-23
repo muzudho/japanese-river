@@ -15,10 +15,12 @@ func monkey():
 # メモリ関連
 # ーーーーーーーー
 
-# 仮想キーの入力状態
+# 仮想キーのこの瞬間の入力状態
 #
-# 	キーは、プログラム内で決まりを作っておいてください。
-# 	値は、ボタンを押していないとき 0、押しているとき 1、レバーは実数
+# 	キー：　プログラム内で決まりを作っておいてください。
+# 	値：
+#		ボタン：　押していないとき 0、押しているとき 1
+#		レバー：　実数
 #
 var key_state = {
 	# 決定ボタン、メッセージ送りボタン
@@ -33,6 +35,30 @@ var key_state = {
 	&"VK_Down" : 0,
 }
 
+# 仮想キーの入力状態の変化の種類
+#
+# 	キー：　プログラム内で決まりを作っておいてください。
+#	値：
+#		&"Release?"：　ボタン、レバー等から指を離して、押されている状態から、ホーム位置にある状態へ遷移している途中（省略されることがあります）
+#		&"Released"：　ボタン、レバー等から指を離して、ボタンやレバーがホーム位置にある状態に到達した最初のフレーム
+#		&"Neutral" ：　ボタン、レバー等から指を離して、ボタンやレバーがホーム位置にある状態で、その状態の２フレーム目以降
+#		&"Press?"  ：　ボタン、レバー等が、ホーム位置にあった状態から、押されている状態へ遷移している途中（省略されることがあります）
+#		&"Pressed" ：　ボタン、レバー等が、押されている状態に到達した最初のフレーム
+#		&"Pressing"：　ボタン、レバー等が、押されている状態で、その状態の２フレーム目以降
+#		初期値は &"Neutral" とする
+#
+var key_process = {
+	# 決定ボタン、メッセージ送りボタン
+	&"VK_Ok" : &"Neutral",
+	# キャンセルボタン、メニューボタン
+	&"VK_Cancel" : &"Neutral",
+	# メッセージ早送りボタン
+	&"VK_FastForward" : &"Neutral",
+	# レバーの左右
+	&"VK_Right" : &"Neutral",
+	# レバーの上下
+	&"VK_Down" : &"Neutral",
+}
 
 # ーーーーーーーー
 # 仮想キーの入力をさばく
@@ -186,6 +212,78 @@ func parse_virtual_lever_input(paragraph_obj):
 
 
 # ーーーーーーーー
+# 毎フレーム処理
+# ーーーーーーーー
+
+# 毎フレーム実行されるので、処理は軽くしたい
+#
+# 	入力されたキーが複数ある場合、 `_unhandled_input` が全部終わってから `_process` が呼出されることを期待する
+#
+func _process(delta):
+	#print("［★プロセス］　delta:" + str(delta))
+
+	# 仮想キーの状態変化の解析
+	self.parse_key_process(&"VK_Ok")
+	self.parse_key_process(&"VK_Cancel")
+	self.parse_key_process(&"VK_FastForward")
+	self.parse_key_process(&"VK_Right")
+	self.parse_key_process(&"VK_Down")
+
+	# ［シナリオ再生中の入力で］状態
+	if self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
+		var department_value = self.monkey().scenario_player_node().get_current_department_value()
+		var department_name_str = str(department_value.name)
+		#print("［入力　シナリオ再生中の入力で］　部門名：" + department_name_str)
+		var paragraph_name = department_value.paragraph_name
+		#print("［入力　シナリオ再生中の入力で］　段落名：" + str(paragraph_name))
+
+		# 辞書
+		var choices_mappings_a = self.monkey().scenario_player_node().get_merged_choices_mappings(department_name_str)
+		
+		# 段落配列。実質的には選択肢の配列
+		#print("［入力　シナリオ再生中の入力で］　辞書：" + str(choices_mappings_a))
+		var paragraph_obj = choices_mappings_a[paragraph_name]
+		#print("［入力　シナリオ再生中の入力で　プロセス］　段落：" + str(paragraph_obj))
+
+		self.parse_virtual_button_input(&"VK_Ok", paragraph_obj)
+		self.parse_virtual_button_input(&"VK_Cancel", paragraph_obj)
+		self.parse_virtual_button_input(&"VK_FastForward", paragraph_obj)
+		self.parse_virtual_lever_input(paragraph_obj)
+
+	
+	# 仮想キーの入力状態のクリアー
+	self.key_state[&"VK_Ok"] = 0
+	self.key_state[&"VK_Cancel"] = 0
+	self.key_state[&"VK_FastForward"] = 0
+	self.key_state[&"VK_Right"] = 0
+	self.key_state[&"VK_Down"] = 0
+
+
+func parse_key_process(virtual_key_name):
+	var old_process = self.key_process[virtual_key_name]
+	var abs_old_state = abs(self.key_state[virtual_key_name])
+
+	# 押すか、放すか、どちらかに達するまで維持します
+	if old_process == &"Release?" || old_process == &"Press?":
+		if 1 <= abs_old_state:
+			self.key_process[virtual_key_name] = &"Pressed"
+		elif 0 == abs_old_state:
+			self.key_process[virtual_key_name] = &"Released"
+	
+	if old_process == &"Released" || old_process == &"Neutral":
+		if 1 <= abs_old_state:
+			self.key_process[virtual_key_name] = &"Pressed"
+		elif 0 < abs_old_state && abs_old_state < 1:
+			self.key_process[virtual_key_name] = &"Press?"
+	
+	if old_process == &"Pressed" || old_process == &"Pressing":
+		if 0 == abs_old_state:
+			self.key_process[virtual_key_name] = &"Released"
+		elif 0 < abs_old_state && abs_old_state < 1:
+			self.key_process[virtual_key_name] = &"Release?"
+
+
+# ーーーーーーーー
 # 入力
 # ーーーーーーーー
 
@@ -210,43 +308,6 @@ func _unhandled_key_input(event):
 	elif self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
 		print("［キー入力　シナリオ再生中の入力で］　event:" + str(event))
 		pass
-
-
-# 毎フレーム実行されるので、処理は軽くしたい
-#
-# 	入力されたキーが複数ある場合、 `_unhandled_input` が全部終わってから `_process` が呼出されることを期待する
-#
-func _process(delta):
-	#print("［★プロセス］　delta:" + str(delta))
-
-	# ［シナリオ再生中の入力で］状態
-	if self.monkey().owner_node().current_state == &"InScenarioPlayingInput":
-		var department_value = self.monkey().scenario_player_node().get_current_department_value()
-		var department_name_str = str(department_value.name)
-		#print("［入力　シナリオ再生中の入力で］　部門名：" + department_name_str)
-		var paragraph_name = department_value.paragraph_name
-		#print("［入力　シナリオ再生中の入力で］　段落名：" + str(paragraph_name))
-
-		# 辞書
-		var choices_mappings_a = self.monkey().scenario_player_node().get_merged_choices_mappings(department_name_str)
-		
-		# 段落配列。実質的には選択肢の配列
-		#print("［入力　シナリオ再生中の入力で］　辞書：" + str(choices_mappings_a))
-		var paragraph_obj = choices_mappings_a[paragraph_name]
-		#print("［入力　シナリオ再生中の入力で　プロセス］　段落：" + str(paragraph_obj))
-
-		self.parse_virtual_button_input(&"VK_Ok", paragraph_obj)
-		self.parse_virtual_button_input(&"VK_Cancel", paragraph_obj)
-		self.parse_virtual_button_input(&"VK_FastForward", paragraph_obj)
-		self.parse_virtual_lever_input(paragraph_obj)
-
-
-	# 仮想キーの入力状態のクリアー
-	self.key_state[&"VK_Ok"] = 0
-	self.key_state[&"VK_Cancel"] = 0
-	self.key_state[&"VK_FastForward"] = 0
-	self.key_state[&"VK_Right"] = 0
-	self.key_state[&"VK_Down"] = 0
 
 
 # テキストボックスなどにフォーカスが無いときの入力をとにかく拾う
