@@ -92,10 +92,10 @@ var key_process = {
 func parse_virtual_button_input(virtual_key_name, paragraph_obj):
 	
 	# まず、ボタンの押下状態を確認
-	var button_value = self.key_state[virtual_key_name]
+	var button_process = self.key_process[virtual_key_name]
 
 	# 押下されており、段落にも記述があるなら	
-	if button_value == 1 && virtual_key_name in paragraph_obj:
+	if button_process == &"Pressed" && virtual_key_name in paragraph_obj:
 		#print("［入力　シナリオ再生中の入力で］　［" + str(virtual_key_name) + "］ボタン押下。段落：" + str(paragraph_obj) + "の中に見つかりました")
 		
 		var target = paragraph_obj[virtual_key_name]
@@ -219,7 +219,7 @@ func parse_virtual_lever_input(paragraph_obj):
 #
 # 	入力されたキーが複数ある場合、 `_unhandled_input` が全部終わってから `_process` が呼出されることを期待する
 #
-func _process(delta):
+func _process(_delta):
 	#print("［★プロセス］　delta:" + str(delta))
 
 	# 仮想キーの状態変化の解析
@@ -266,20 +266,26 @@ func parse_key_process(virtual_key_name):
 	# 押すか、放すか、どちらかに達するまで維持します
 	if old_process == &"Release?" || old_process == &"Press?":
 		if 1 <= abs_old_state:
+			print("［入力解析］　浮遊状態から押下確定")
 			self.key_process[virtual_key_name] = &"Pressed"
 		elif 0 == abs_old_state:
+			print("［入力解析］　浮遊状態から解放確定")
 			self.key_process[virtual_key_name] = &"Released"
 	
-	if old_process == &"Released" || old_process == &"Neutral":
+	elif old_process == &"Released" || old_process == &"Neutral":
 		if 1 <= abs_old_state:
+			print("［入力解析］　解放状態から押下確定")
 			self.key_process[virtual_key_name] = &"Pressed"
 		elif 0 < abs_old_state && abs_old_state < 1:
+			print("［入力解析］　解放状態から押下浮遊")
 			self.key_process[virtual_key_name] = &"Press?"
 	
-	if old_process == &"Pressed" || old_process == &"Pressing":
+	elif old_process == &"Pressed" || old_process == &"Pressing":
 		if 0 == abs_old_state:
+			print("［入力解析］　押下状態から解放確定")
 			self.key_process[virtual_key_name] = &"Released"
 		elif 0 < abs_old_state && abs_old_state < 1:
+			print("［入力解析］　押下状態から解放浮遊")
 			self.key_process[virtual_key_name] = &"Release?"
 
 

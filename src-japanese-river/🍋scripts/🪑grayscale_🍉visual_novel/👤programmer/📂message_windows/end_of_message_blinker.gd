@@ -67,7 +67,7 @@ func of_staff():
 func get_message_window_name():
 	var temp = $"../..".name
 	temp = temp.substr("MessageWindow_".length())
-	print("［文末ブリンカー］　伝言窓名：［" + temp + "］")
+	#print("［文末ブリンカー］　伝言窓名：［" + temp + "］")
 	return StringName(temp)
 
 
