@@ -44,10 +44,10 @@ func on_process(_delta):
 		var paragraph_obj = choices_mappings_a[paragraph_name]
 		#print("［入力　シナリオ再生中の入力で　プロセス］　段落：" + str(paragraph_obj))
 
-		self.owner_node().parse_virtual_button_input(&"VK_Ok", paragraph_obj)
-		self.owner_node().parse_virtual_button_input(&"VK_Cancel", paragraph_obj)
-		self.owner_node().parse_virtual_button_input(&"VK_FastForward", paragraph_obj)
-		self.owner_node().parse_virtual_lever_input(paragraph_obj)
+		self.monkey().input_japanese_river_node().parse_virtual_button_input(&"VK_Ok", paragraph_obj)
+		self.monkey().input_japanese_river_node().parse_virtual_button_input(&"VK_Cancel", paragraph_obj)
+		self.monkey().input_japanese_river_node().parse_virtual_button_input(&"VK_FastForward", paragraph_obj)
+		self.monkey().input_japanese_river_node().parse_virtual_lever_input(paragraph_obj)
 
 
 # Parameters

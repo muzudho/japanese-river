@@ -48,6 +48,11 @@ func input_node():
 	return self.owner_node().get_node("🕹️Input")
 
 
+# 入力取得
+func input_japanese_river_node():
+	return self.owner_node().get_node("🕹️Input_🍉JapaneseRiver")
+
+
 # キー・コンフィグ取得
 func key_config_node():
 	return self.owner_node().get_node("🎬🍉KeyConfig")
